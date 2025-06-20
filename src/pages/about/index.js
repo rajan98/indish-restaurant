@@ -1,6 +1,7 @@
 import Head from "next/head";
 import EachPageLayout from "../../components/layout/EachPageLayout";
 import APP_CONSTANTS from "../../constants/app_constants";
+import Description from "../../constants/descriptions";
 
 export default function index() {
   return (
@@ -16,14 +17,7 @@ export default function index() {
             {/* Text Content */}
             <div className="text-left space-y-6">
               <p className="text-lg md:text-xl leading-relaxed font-light">
-                Embark on a culinary adventure at Mehmaan, where tradition meets
-                modern innovation. We celebrate the vibrant tapestry of Indian
-                flavors, using fresh, seasonal ingredients to create dishes that
-                are both familiar and exciting Restaurant in Wahroonga. Our
-                modern Indian cuisine reimagines classic favorites with a
-                contemporary twist, while staying true to the depth and soul of
-                authentic Indian spices. Prepare to be surprised and delighted
-                by our unique take on timeless Indian food.
+                {Description.aboutPage.description}
               </p>
             </div>
 

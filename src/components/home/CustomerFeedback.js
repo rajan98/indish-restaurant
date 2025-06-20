@@ -2,6 +2,7 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { Star } from "lucide-react";
 import React, { useCallback } from "react";
+import Description from "../../constants/descriptions";
 
 // Dot Buttons Hook
 const useDotButton = (emblaApi, onButtonClick) => {
@@ -46,37 +47,6 @@ const DotButton = ({ onClick, className }) => (
 );
 
 const CustomerFeedback = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Alok Singh",
-      rating: 5,
-      review:
-        "One should definitely give a try especially afghani Chicken...food here is so good and mouth watering I have ordering and taking away from this place for last 6 and never had a complaint about food...Catering option is also worth to checkout",
-    },
-    {
-      id: 2,
-      name: "Sarah Johnson",
-      rating: 5,
-      review:
-        "Yummmm. Have eaten here a few times but seems like they have raised the bar with their Indian food. Still maintaining their authentic taste while adding modern twists. Absolutely love the atmosphere and service!",
-    },
-    {
-      id: 3,
-      name: "Raj Patel",
-      rating: 5,
-      review:
-        "Amazing experience! The butter chicken was exceptional and the naan was perfectly baked. Staff is very friendly and the ambiance is perfect for family dining. Will definitely recommend to friends.",
-    },
-    {
-      id: 4,
-      name: "Emily Chen",
-      rating: 5,
-      review:
-        "Best Indian restaurant in the area! Fresh ingredients, authentic flavors, and excellent presentation. The lunch buffet is incredible value for money. Love coming here for special occasions.",
-    },
-  ];
-
   const options = {
     align: "start",
     loop: true,
@@ -133,12 +103,12 @@ const CustomerFeedback = () => {
           <div className="flex items-center justify-center mb-4">
             <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
             <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
-              HAPPY CUSTOMERS
+              {Description.customerFeedbacks.title}
             </span>
             <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our Customers Feedback
+            {Description.customerFeedbacks.subTitle}
           </h2>
         </div>
 
@@ -165,43 +135,45 @@ const CustomerFeedback = () => {
             {/* Carousel Viewport */}
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
-                {testimonials.map((testimonial) => (
-                  <div key={testimonial.id} className="flex-none w-full">
-                    <div className="space-y-8 px-4">
-                      {/* Star Rating */}
-                      <div className="flex items-center space-x-2">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            size={24}
-                            className="text-orange-400 fill-current"
-                          />
-                        ))}
-                        <span className="text-gray-400 text-lg ml-2">
-                          ({testimonial.rating}/5)
-                        </span>
+                {Description.customerFeedbacks.testimonials.map(
+                  (testimonial) => (
+                    <div key={testimonial.id} className="flex-none w-full">
+                      <div className="space-y-8 px-4">
+                        {/* Star Rating */}
+                        <div className="flex items-center space-x-2">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              size={24}
+                              className="text-orange-400 fill-current"
+                            />
+                          ))}
+                          <span className="text-gray-400 text-lg ml-2">
+                            ({testimonial.rating}/5)
+                          </span>
+                        </div>
+
+                        {/* Testimonial Title */}
+                        <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
+                          Awesome and delicious food
+                        </h3>
+
+                        {/* Review Text */}
+                        <p className="text-lg text-gray-300 leading-relaxed">
+                          {testimonial.review}
+                        </p>
+
+                        {/* Divider */}
+                        <div className="w-24 h-px bg-orange-400"></div>
+
+                        {/* Customer Name */}
+                        <h4 className="text-xl font-semibold text-white">
+                          {testimonial.name}
+                        </h4>
                       </div>
-
-                      {/* Testimonial Title */}
-                      <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
-                        Awesome and delicious food
-                      </h3>
-
-                      {/* Review Text */}
-                      <p className="text-lg text-gray-300 leading-relaxed">
-                        {testimonial.review}
-                      </p>
-
-                      {/* Divider */}
-                      <div className="w-24 h-px bg-orange-400"></div>
-
-                      {/* Customer Name */}
-                      <h4 className="text-xl font-semibold text-white">
-                        {testimonial.name}
-                      </h4>
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -237,37 +209,39 @@ const CustomerFeedback = () => {
           <div className="relative">
             <div className="overflow-hidden" ref={emblaRefMobile}>
               <div className="flex">
-                {testimonials.map((testimonial) => (
-                  <div
-                    key={`mobile-${testimonial.id}`}
-                    className="flex-none w-full"
-                  >
-                    <div className="text-center space-y-6 bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
-                      <div className="flex justify-center space-x-1 mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            size={20}
-                            className="text-orange-400 fill-current"
-                          />
-                        ))}
-                        <span className="text-gray-400 ml-2">
-                          ({testimonial.rating}/5)
-                        </span>
+                {Description.customerFeedbacks.testimonials.map(
+                  (testimonial) => (
+                    <div
+                      key={`mobile-${testimonial.id}`}
+                      className="flex-none w-full"
+                    >
+                      <div className="text-center space-y-6 bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
+                        <div className="flex justify-center space-x-1 mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              size={20}
+                              className="text-orange-400 fill-current"
+                            />
+                          ))}
+                          <span className="text-gray-400 ml-2">
+                            ({testimonial.rating}/5)
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-bold">
+                          Awesome and delicious food
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {testimonial.review}
+                        </p>
+                        <div className="w-16 h-px bg-orange-400 mx-auto"></div>
+                        <h4 className="text-lg font-semibold text-white">
+                          {testimonial.name}
+                        </h4>
                       </div>
-                      <h3 className="text-2xl font-bold">
-                        Awesome and delicious food
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {testimonial.review}
-                      </p>
-                      <div className="w-16 h-px bg-orange-400 mx-auto"></div>
-                      <h4 className="text-lg font-semibold text-white">
-                        {testimonial.name}
-                      </h4>
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
             </div>
 
