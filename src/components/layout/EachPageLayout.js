@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import APP_URL from "../../constants/url";
 import Footer from "./Footer";
 import Header from "./Header";
-import APP_URL from "../../constants/url";
 
 export default function EachPageLayout({ children, title }) {
   const router = useRouter();
@@ -12,7 +12,7 @@ export default function EachPageLayout({ children, title }) {
     <div className="min-h-screen bg-black">
       <Header />
       <div
-        className="h-[230px] md:h-[400px] overflow-hidden -mt-1 relative"
+        className="h-[330px] md:h-[450px] overflow-hidden -mt-1 relative"
         style={{
           backgroundColor: "#000",
           backgroundImage: `url("/images/Home/AboutSection/Background.webp")`,
