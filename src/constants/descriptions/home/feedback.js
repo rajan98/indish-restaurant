@@ -1,34 +1,34 @@
 const customerFeedbacks = {
   title: "HAPPY CUSTOMERS",
-  subTitle: "Our Customers Feedback",
+  subTitle: "What Our Guests Are Saying",
   testimonials: [
     {
       id: 1,
-      name: "Alok Singh",
+      name: "Marcus Thompson",
       rating: 5,
       review:
-        "One should definitely give a try especially afghani Chicken...food here is so good and mouth watering I have ordering and taking away from this place for last 6 and never had a complaint about food...Catering option is also worth to checkout",
+        "Absolutely blown away by the lamb biryani! The spices were perfectly balanced and the meat just melted in my mouth. Been coming here weekly since they opened - the consistency is remarkable. Their catering for our office event was flawless too.",
     },
     {
       id: 2,
-      name: "Sarah Johnson",
+      name: "Priya Melbourne",
       rating: 5,
       review:
-        "Yummmm. Have eaten here a few times but seems like they have raised the bar with their Indian food. Still maintaining their authentic taste while adding modern twists. Absolutely love the atmosphere and service!",
+        "Finally found authentic Indian flavors that remind me of home! The dal makhani is divine and the garlic naan is addictive. Love how they've elevated traditional dishes without losing their soul. The staff treats you like family!",
     },
     {
       id: 3,
-      name: "Raj Patel",
+      name: "David Kim",
       rating: 5,
       review:
-        "Amazing experience! The butter chicken was exceptional and the naan was perfectly baked. Staff is very friendly and the ambiance is perfect for family dining. Will definitely recommend to friends.",
+        "Incredible dining experience from start to finish! The tandoori prawns were a revelation and the mango kulfi was the perfect ending. Beautiful presentation and the service was attentive without being intrusive. Already planning our next visit!",
     },
     {
       id: 4,
-      name: "Emily Chen",
+      name: "Jessica Rodriguez",
       rating: 5,
       review:
-        "Best Indian restaurant in the area! Fresh ingredients, authentic flavors, and excellent presentation. The lunch buffet is incredible value for money. Love coming here for special occasions.",
+        "This place has become our go-to for date nights! The paneer makhani is heavenly and they accommodate my partner's gluten-free needs perfectly. The ambiance is warm and romantic, and the value for quality is outstanding.",
     },
   ],
 };

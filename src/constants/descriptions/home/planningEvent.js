@@ -1,13 +1,13 @@
 const planningEvent = {
   mainHeading: "PLANNING AN EVENT",
-  eventTypes: "A WORK LUNCH / BIRTHDAY CELEBRATION / PRIVATE EVENT",
+  eventTypes: "CORPORATE FUNCTIONS / FAMILY CELEBRATIONS / SPECIAL OCCASIONS",
   description:
-    "CATERING WE'RE HERE FOR YOU! BOOK FOR YOUR BIRTHDAY EVENTS OR CORPORATE EVENTS OR INQUIRE ABOUT EVENT CATERING.",
+    "FROM INTIMATE GATHERINGS TO GRAND CELEBRATIONS - WE CREATE MEMORABLE EXPERIENCES WITH AUTHENTIC INDIAN HOSPITALITY AND EXCEPTIONAL CUISINE.",
   features: [
-    "Professional event planning and coordination",
-    "Customized menu options for all dietary requirements",
-    "Full-service catering for events of all sizes",
-    "Complete setup and decoration services available",
+    "Experienced event coordination and seamless execution",
+    "Tailored menus accommodating diverse dietary preferences",
+    "Comprehensive catering solutions for intimate to large-scale events",
+    "Complete venue styling and ambient setup services",
   ],
   button: "Send Event Enquiry",
 };

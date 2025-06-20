@@ -1,10 +1,10 @@
 const heroDescriptions = {
-  subtitle: "The Evolution of Indian Cuisine",
+  subtitle: "Authentic Indian Flavors, Australian Heart",
   title: {
-    main: "Inspired Indian,",
-    highlighted: "Modern Mastery"
+    main: "Traditional Spices,",
+    highlighted: "Contemporary Soul"
   },
-  description: "Inspired Indish, crafted with modern mastery for an unforgettable dining experience.",
+  description: "Experience the vibrant tastes of India reimagined for the modern palate - where heritage meets innovation in every dish.",
   primaryButton: "Order Now",
   secondaryButton: "Reserve a Table"
 };

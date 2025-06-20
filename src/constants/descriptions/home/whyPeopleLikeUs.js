@@ -1,24 +1,24 @@
 const whyPeopleLikeUs = {
-  sectionLabel: "WHY PEOPLE LOVE US",
-  headerDescription: "At Mehmaan, we are passionate about delivering an exceptional dining experience that combines the best of traditional Indian cuisine with modern innovation.",
+  sectionLabel: "WHAT MAKES US SPECIAL",
+  headerDescription: "We believe dining is about creating connections - bringing together the warmth of Indian hospitality with the freshest local Australian ingredients for an experience that feels both exotic and familiar.",
   features: [
     {
-      title: "Exceptional Service",
-      description: "Our dedicated staff goes above and beyond to ensure that every guest feels welcome and well-cared for. From the moment you walk in, you'll experience our commitment to providing outstanding service."
+      title: "Warm Indian Hospitality",
+      description: "Experience 'Atithi Devo Bhava' - our guests are like family. Our team creates an atmosphere where every visit feels like coming home, with attentive service that anticipates your needs before you ask."
     },
     {
-      title: "Authentic Flavors with a Modern Twist",
-      description: "Our menu reimagines classic Indian dishes with contemporary flair, creating a unique culinary experience that honors tradition while embracing innovation. Each bite is a perfect blend of familiar and exciting flavors."
+      title: "Heritage Recipes, Modern Presentation",
+      description: "Time-honored family recipes passed down through generations meet contemporary culinary techniques. We preserve the soul of traditional Indian cooking while presenting it with modern elegance and flair."
     },
     {
-      title: "Fresh, Seasonal Ingredients",
-      description: "We take pride in using only the freshest, seasonal ingredients to craft our dishes. This commitment to quality ensures that every meal is vibrant, flavorful, and nourishing."
+      title: "Premium Local & Imported Ingredients",
+      description: "The finest Australian produce combined with authentic spices sourced directly from India. This marriage of local freshness and traditional ingredients creates dishes that are both genuine and exceptional."
     }
   ],
   cta: {
-    title: "Experience the Difference Today",
-    description: "Join us for an unforgettable culinary journey that celebrates the rich heritage of Indian cuisine.",
-    button: "Make a Reservation"
+    title: "Discover Your New Favorite",
+    description: "Step into a world where every meal tells a story of tradition, passion, and culinary excellence.",
+    button: "Reserve Now"
   }
 };
 
