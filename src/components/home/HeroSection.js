@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
-import APP_URL from "../../constants/url";
 import Description from "../../constants/descriptions";
+import APP_URL from "../../constants/url";
 import StoreOpeningPopup from "../ui/Popup";
 
 const HeroSection = () => {
@@ -39,11 +39,11 @@ const HeroSection = () => {
     <>
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
       >
         {/* Background Video */}
         <div className="absolute inset-0">
-          <video
+          {/* <video
             autoPlay
             muted
             loop
@@ -55,7 +55,11 @@ const HeroSection = () => {
             <source src="/videos/hero.webm" type="video/webm" />
             <source src="/videos/hero-compressed.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
+          <img
+            className="w-full h-full object-cover"
+            src="/videos/hero.webp"
+          />
           {/* Video Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/60" />
         </div>

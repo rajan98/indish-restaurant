@@ -72,19 +72,24 @@ export default function Home() {
                 "Modern Indian restaurant offering authentic flavors with contemporary innovation",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Shop 1/167 Pacific Hwy",
-                addressLocality: "Hornsby",
+                streetAddress: "6/115 Darby Street",
+                addressLocality: "Cooks Hill",
                 addressRegion: "NSW",
-                postalCode: "2077",
+                postalCode: "2300", // Newcastle area postal code
                 addressCountry: "AU",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: -33.7047,
-                longitude: 151.0982,
+                latitude: -32.9283, // Cooks Hill coordinates
+                longitude: 151.7817,
               },
-              telephone: "+61294777799",
-              openingHours: "Mo-Su 17:00-22:00",
+              telephone: "(04) 5232 8901",
+              openingHours: [
+                "Mo-Fr 11:00-14:00",
+                "Mo-Fr 17:00-22:00",
+                "Sa-Su 09:00-14:00",
+                "Sa-Su 17:00-22:00",
+              ],
               servesCuisine: "Indian",
               priceRange: "$$",
               aggregateRating: {
