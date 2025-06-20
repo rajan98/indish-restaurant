@@ -1,5 +1,6 @@
 import Link from "next/link";
 import APP_URL from "../../constants/url";
+import Description from "../../constants/descriptions";
 
 const HeroSection = () => {
   return (
@@ -31,19 +32,18 @@ const HeroSection = () => {
         <div className="text-center text-white max-w-4xl mx-auto">
           {/* Subtitle */}
           <p className="text-primary-300 text-lg md:text-xl font-medium mb-4 tracking-wide">
-            The Evolution of Indian Cuisine
+            {Description.hero.subtitle}
           </p>
 
           {/* Main Title */}
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-shadow">
-            Inspired Indian,{" "}
-            <span className="text-primary-400">Modern Mastery</span>
+            {Description.hero.title.main}{" "}
+            <span className="text-primary-400">{Description.hero.title.highlighted}</span>
           </h2>
 
           {/* Description */}
           <p className="text-sm md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-200 max-w-3xl mx-auto">
-            Inspired Indish, crafted with modern mastery for an unforgettable
-            dining experience.
+            {Description.hero.description}
           </p>
 
           {/* Call to Action Buttons */}
@@ -52,13 +52,13 @@ const HeroSection = () => {
               href={APP_URL.order}
               className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl"
             >
-              Order Now
+              {Description.hero.primaryButton}
             </Link>
             <Link
               href={APP_URL.book_table}
               className="btn-secondary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4"
             >
-              Reserve a Table
+              {Description.hero.secondaryButton}
             </Link>
           </div>
         </div>
