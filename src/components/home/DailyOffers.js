@@ -2,27 +2,11 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import APP_CONSTANTS from "../../constants/app_constants";
+import Description from "../../constants/descriptions";
 import APP_URL from "../../constants/url";
 
-const DailyOffers = () => {
-  const carouselImages = [
-    {
-      id: 1,
-      image: "/images/Home/DailyOffer/1.webp",
-      alt: "Delicious curry with rice",
-    },
-    {
-      id: 2,
-      image: "/images/Home/DailyOffer/2.webp",
-      alt: "Buffet spread",
-    },
-    {
-      id: 3,
-      image: "/images/Home/DailyOffer/3.webp",
-      alt: "Indian cuisine special",
-    },
-  ];
 
+const DailyOffers = () => {
   const options = {
     align: "start",
     loop: true,
@@ -53,7 +37,7 @@ const DailyOffers = () => {
               {/* Carousel */}
               <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
                 <div className="flex">
-                  {carouselImages.map((item) => (
+                  {Description.dailyOffer.carouselImages.map((item) => (
                     <div key={item.id} className="flex-none w-full">
                       <div className="relative">
                         <img
@@ -77,42 +61,42 @@ const DailyOffers = () => {
             <div>
               <div className="flex items-center mb-4">
                 <span className="text-orange-400 text-sm tracking-wider font-medium">
-                  DAILY OFFER
+                  {Description.dailyOffer.dailyOfferLabel}
                 </span>
                 <div className="ml-4 h-px bg-gradient-to-r from-orange-400 to-transparent w-24"></div>
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-                10% OFF ONLINE PICKUP ORDERS
+                {Description.dailyOffer.mainOffer}
               </h2>
             </div>
 
             {/* Opening Hours Dinner */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                OPENING HOURS DINNER:
+                {Description.dailyOffer.openingHours.title}
               </h3>
               <p className="text-xl text-gray-300">
-                TUESDAY TO SUNDAY 05:00 PM - 09:30 PM
+                {Description.dailyOffer.openingHours.time}
               </p>
             </div>
 
             {/* Lunch Buffet */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                LUNCH BUFFET – $29.99 PER PERSON ALL YOU CAN EAT
+                {Description.dailyOffer.lunchBuffet.title}
               </h3>
 
               <div className="space-y-2">
                 <p className="text-lg text-gray-300">
                   <span className="font-semibold text-white">
-                    Children under 10:
+                    {Description.dailyOffer.lunchBuffet.childrenLabel}
                   </span>
                 </p>
                 <p className="text-xl text-orange-400 font-bold">
-                  $15 per child
+                  {Description.dailyOffer.lunchBuffet.childrenPrice}
                 </p>
                 <p className="text-lg text-gray-300">
-                  11:30 AM - 03:00 PM (SAT AND SUN)
+                  {Description.dailyOffer.lunchBuffet.time}
                 </p>
               </div>
             </div>
@@ -120,7 +104,7 @@ const DailyOffers = () => {
             {/* Wine License */}
             <div>
               <h3 className="text-xl font-bold text-white mb-2">
-                BYO Wine Only (Fully Licensed)
+                {Description.dailyOffer.wineLicense}
               </h3>
             </div>
 
@@ -154,7 +138,7 @@ const DailyOffers = () => {
                 href={APP_URL.book_table}
                 className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl inline-block"
               >
-                RESERVE TABLE
+                {Description.dailyOffer.reserveButton}
               </Link>
             </div>
           </div>
@@ -185,7 +169,7 @@ const DailyOffers = () => {
               {/* Left - Main Heading */}
               <div className="text-white">
                 <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
-                  Unveiling modern Indian flavors in a fine-dining experience.
+                  {Description.dailyOffer.features.mainHeading}
                 </h2>
               </div>
 
@@ -198,9 +182,9 @@ const DailyOffers = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Quality Food</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{Description.dailyOffer.features.qualityFood.title}</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  "Deliciously crafted dishes blending fresh, seasonal ingredients with authentic Indian spices and innovation."
+                  "{Description.dailyOffer.features.qualityFood.description}"
                 </p>
               </div>
 
@@ -213,9 +197,9 @@ const DailyOffers = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Perfect Taste</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{Description.dailyOffer.features.perfectTaste.title}</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  "Exceptional dishes blending fresh, seasonal ingredients with authentic Indian spices and innovative flair."
+                  "{Description.dailyOffer.features.perfectTaste.description}"
                 </p>
               </div>
             </div>
@@ -226,7 +210,7 @@ const DailyOffers = () => {
               {/* Main Heading */}
               <div className="text-center">
                 <h2 className="text-2xl font-bold text-white leading-tight">
-                  Unveiling modern Indian flavors in a fine-dining experience.
+                  {Description.dailyOffer.features.mainHeading}
                 </h2>
               </div>
 
@@ -242,9 +226,9 @@ const DailyOffers = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2">Quality Food</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">{Description.dailyOffer.features.qualityFood.title}</h3>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        "Deliciously crafted dishes blending fresh, seasonal ingredients with authentic Indian spices and innovation."
+                        "{Description.dailyOffer.features.qualityFood.description}"
                       </p>
                     </div>
                   </div>
@@ -259,9 +243,9 @@ const DailyOffers = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2">Perfect Taste</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">{Description.dailyOffer.features.perfectTaste.title}</h3>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        "Exceptional dishes blending fresh, seasonal ingredients with authentic Indian spices and innovative flair."
+                        "{Description.dailyOffer.features.perfectTaste.description}"
                       </p>
                     </div>
                   </div>
