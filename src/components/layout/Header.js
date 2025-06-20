@@ -71,13 +71,6 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center">
               <SiteLogo />
-              <h1
-                className={`text-xl md:text-2xl font-bold ${
-                  isScrolled ? "text-primary-400" : "text-white"
-                }`}
-              >
-                {APP_CONSTANTS.company_name_title_case}
-              </h1>
             </div>
 
             {/* Desktop Navigation */}

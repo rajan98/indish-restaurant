@@ -54,11 +54,8 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center">
               <SiteLogo />
-              <h3 className={`text-xl md:text-2xl font-bold text-primary-400`}>
-                {APP_CONSTANTS.company_name_title_case}
-              </h3>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-5">
               {socialLinks.map((social, index) => (
                 <Link
                   key={index}
