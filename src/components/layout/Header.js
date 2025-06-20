@@ -3,11 +3,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
 import APP_URL from "../../constants/url";
+import StoreOpeningPopup from "../ui/Popup";
 import SiteLogo from "../ui/SiteLogo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [pendingUrl, setPendingUrl] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +23,43 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Function to handle navigation with store opening check
+  const handleNavigation = (e, href) => {
+    // Only show popup for external links (order, book_table, event, contact) when store is closed
+    if (!APP_CONSTANTS.opened) {
+      const externalLinks = [
+        APP_URL.order,
+        APP_URL.book_table,
+        APP_URL.event,
+        APP_URL.contact,
+      ];
+
+      if (externalLinks.includes(href)) {
+        e.preventDefault();
+        setPendingUrl(href);
+        setShowPopup(true);
+        setIsMenuOpen(false); // Close mobile menu if open
+        return;
+      }
+    }
+
+    // For internal links or when store is open, proceed normally
+    setIsMenuOpen(false);
+  };
+
+  // Handle popup confirmation
+  const handleConfirm = () => {
+    setShowPopup(false);
+    window.location.href = pendingUrl;
+    setPendingUrl("");
+  };
+
+  // Handle popup cancellation
+  const handleCancel = () => {
+    setShowPopup(false);
+    setPendingUrl("");
   };
 
   const navItems = [
@@ -79,6 +119,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => handleNavigation(e, item.href)}
                   className={`font-medium transition-colors duration-300 ${
                     isScrolled
                       ? "text-white hover:text-primary-400"
@@ -88,7 +129,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              {/* <Link href={APP_URL.book_table} className="btn-primary">Reserve a Table</Link> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -137,7 +177,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.href}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleNavigation(e, item.href)}
               className={`block px-6 py-4 text-lg font-medium border-b border-gray-800/50 hover:bg-gray-900 transition-colors duration-300 ${
                 item.name === "Order Online (10% Off)"
                   ? "text-primary-400"
@@ -167,6 +207,13 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Store Opening Popup */}
+      <StoreOpeningPopup
+        isOpen={showPopup}
+        onConfirm={handleConfirm}
+        onCancel={handleCancel}
+      />
     </>
   );
 };

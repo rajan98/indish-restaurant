@@ -11,7 +11,9 @@ const APP_CONSTANTS = {
     email: "info@Indish.com.au",
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
-    twitter: "https://www.x.com/", 
+    twitter: "https://www.x.com/",
+    opened: false,
+    openingDate: '4th July 2025'
 }
 
 export default APP_CONSTANTS;
