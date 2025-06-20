@@ -1,10 +1,10 @@
 const whyPeopleLikeUs = {
   sectionLabel: "WHAT MAKES US SPECIAL",
-  headerDescription: "We believe dining is about creating connections - bringing together the warmth of Indian hospitality with the freshest local Australian ingredients for an experience that feels both exotic and familiar.",
+  headerDescription: "Experience the rich diversity of North to South Indian cuisine on a single plate.",
   features: [
     {
       title: "Warm Indian Hospitality",
-      description: "Experience 'Atithi Devo Bhava' - our guests are like family. Our team creates an atmosphere where every visit feels like coming home, with attentive service that anticipates your needs before you ask."
+      description: "Bold flavours. Perfect Plating. Genuine warmth. We bring you the best of Indian cuisine with a modern twist - combining preminum ingredients, perfected recipes, and the kind of hospitality that stays with you."
     },
     {
       title: "Heritage Recipes, Modern Presentation",

@@ -3,8 +3,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import { useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
-import APP_URL from "../../constants/url";
 import Description from "../../constants/descriptions";
+import APP_URL from "../../constants/url";
 import StoreOpeningPopup from "../ui/Popup";
 
 const DailyOffers = () => {
@@ -109,34 +109,9 @@ const DailyOffers = () => {
                 <p className="text-xl text-gray-300">
                   {Description.dailyOffer.openingHours.time}
                 </p>
-              </div>
-
-              {/* Lunch Buffet */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-white">
-                  {Description.dailyOffer.lunchBuffet.title}
-                </h3>
-
-                <div className="space-y-2">
-                  <p className="text-lg text-gray-300">
-                    <span className="font-semibold text-white">
-                      {Description.dailyOffer.lunchBuffet.childrenLabel}
-                    </span>
-                  </p>
-                  <p className="text-xl text-orange-400 font-bold">
-                    {Description.dailyOffer.lunchBuffet.childrenPrice}
-                  </p>
-                  <p className="text-lg text-gray-300">
-                    {Description.dailyOffer.lunchBuffet.time}
-                  </p>
-                </div>
-              </div>
-
-              {/* Wine License */}
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {Description.dailyOffer.wineLicense}
-                </h3>
+                 <p className="text-xl text-gray-300">
+                  {Description.dailyOffer.openingHours.time2}
+                </p>
               </div>
 
               {/* Contact Information */}

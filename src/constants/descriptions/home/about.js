@@ -1,9 +1,11 @@
 const aboutDescription = {
   title: {
-    highlighted: "CULINARY HERITAGE"
+    highlighted: "Indian Restro - Bar",
   },
-  description: "Welcome to a dining experience where generations of Indian culinary wisdom meets Australian passion for fresh, quality ingredients. Our kitchen is a celebration of regional Indian cuisines - from the aromatic biryanis of Hyderabad to the coastal curries of Kerala. Each dish tells a story, crafted by chefs who understand that great Indian food isn't just about spices, but the harmony between tradition, technique, and heart. We source the finest Australian produce and combine it with authentic spices imported directly from India, creating a menu that honors our roots while embracing our new home.",
-  button: "Our Story"
+  description: "Flames of the past in a modern kitchen",
+  description2:
+    "Indish brings the heart of indian kitchens to life - from tandoors fired by tradition to recipes whispered down generations. We honour old techniques while embracing global sophistication.",
+  button: "Our Story",
 };
 
 export default aboutDescription;

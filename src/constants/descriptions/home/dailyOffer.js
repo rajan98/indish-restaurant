@@ -3,15 +3,9 @@ const dailyOffer = {
   mainOffer: "10% OFF ONLINE PICKUP ORDERS",
   openingHours: {
     title: "OPENING HOURS DINNER:",
-    time: "TUESDAY TO SUNDAY 05:00 PM - 09:30 PM",
-  },
-  lunchBuffet: {
-    title: "LUNCH BUFFET – $29.99 PER PERSON ALL YOU CAN EAT",
-    childrenLabel: "Children under 10:",
-    childrenPrice: "$15 per child",
-    time: "11:30 AM - 03:00 PM (SAT AND SUN)",
-  },
-  wineLicense: "BYO Wine Only (Fully Licensed)",
+    time: "MON TO FRI 11:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",
+    time2: "SAT TO SUN 9:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",
+  },  
   reserveButton: "RESERVE TABLE",
 
   // Bottom Features

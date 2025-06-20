@@ -1,7 +1,7 @@
 import Link from "next/link";
 import APP_CONSTANTS from "../../constants/app_constants";
-import APP_URL from "../../constants/url";
 import Description from "../../constants/descriptions";
+import APP_URL from "../../constants/url";
 
 const AboutSection = () => {
   return (
@@ -59,8 +59,11 @@ const AboutSection = () => {
                 <span className="text-primary-400">{Description.about.title.highlighted}</span>
               </h2>
 
-              <p className="text-base lg:text-lg text-gray-100 leading-relaxed mb-10">
-                {Description.about.description}
+              <p className="text-base lg:text-lg text-gray-100 leading-relaxed mb-5 font-bold">
+                {`" ${Description.about.description} "`}
+              </p>
+               <p className="text-base lg:text-lg text-gray-100 leading-relaxed mb-10">
+                {Description.about.description2}
               </p>
 
               <Link

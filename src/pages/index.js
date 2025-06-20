@@ -1,6 +1,5 @@
 import Head from "next/head";
 import AboutSection from "../components/home/AboutSection";
-import CustomerFeedback from "../components/home/CustomerFeedback";
 import DailyOffers from "../components/home/DailyOffers";
 import FeaturedDishes from "../components/home/FeaturedDishes";
 import HeroSection from "../components/home/HeroSection";
@@ -116,8 +115,8 @@ export default function Home() {
           <ParallexBackground imageUrl={"/images/Home/Parallex/1.webp"} />
           <PlanningAnEvent />
           <ParallexBackground imageUrl={"/images/Home/Parallex/3.webp"} />
-          <CustomerFeedback />
-          <ParallexBackground imageUrl={"/images/Home/Parallex/2.webp"} />
+          {/* <CustomerFeedback />
+          <ParallexBackground imageUrl={"/images/Home/Parallex/2.webp"} /> */}
         </main>
 
         <Footer />
