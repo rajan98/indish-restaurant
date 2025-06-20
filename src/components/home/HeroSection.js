@@ -58,7 +58,7 @@ const HeroSection = () => {
           </video> */}
           <img
             className="w-full h-full object-cover"
-            src="/videos/hero.webp"
+            src="/images/Hero/hero.webp"
           />
           {/* Video Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/60" />
