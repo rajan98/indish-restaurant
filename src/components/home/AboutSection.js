@@ -1,6 +1,7 @@
 import Link from "next/link";
 import APP_CONSTANTS from "../../constants/app_constants";
 import APP_URL from "../../constants/url";
+import Description from "../../constants/descriptions";
 
 const AboutSection = () => {
   return (
@@ -55,25 +56,18 @@ const AboutSection = () => {
               <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-8 leading-tight">
                 {`${APP_CONSTANTS.company_name_title_case.toUpperCase()}`}
                 <br />
-                <span className="text-primary-400">MODERN CUISINE</span>
+                <span className="text-primary-400">{Description.about.title.highlighted}</span>
               </h2>
 
               <p className="text-base lg:text-lg text-gray-100 leading-relaxed mb-10">
-                Embark on a culinary adventure at Indish, where tradition meets
-                modern innovation. We celebrate the vibrant tapestry of Indian
-                flavors, using fresh, seasonal ingredients to create dishes that
-                are both familiar and exciting. Our modern Indish reimagines
-                classic favorites with a contemporary twist, while staying true
-                to the depth and soul of authentic Indian spices. Prepare to be
-                surprised and delighted by our unique take on timeless Indian
-                food.
+                {Description.about.description}
               </p>
 
               <Link
                 href={APP_URL.menu}
                 className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl inline-block"
               >
-                Discover More
+                {Description.about.button}
               </Link>
             </div>
           </div>
