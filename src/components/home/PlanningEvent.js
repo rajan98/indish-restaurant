@@ -1,5 +1,6 @@
 import Link from "next/link";
 import APP_URL from "../../constants/url";
+import Description from "../../constants/descriptions";
 
 const PlanningAnEvent = () => {
   return (
@@ -34,51 +35,32 @@ const PlanningAnEvent = () => {
             {/* Main Heading */}
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                PLANNING AN EVENT
+                {Description.planningEvent.mainHeading}
               </h2>
             </div>
 
             {/* Event Types */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-orange-400">
-                A WORK LUNCH / BIRTHDAY CELEBRATION / PRIVATE EVENT
+                {Description.planningEvent.eventTypes}
               </h3>
             </div>
 
             {/* Description */}
             <div className="space-y-4">
               <p className="text-xl text-gray-300 leading-relaxed">
-                CATERING WE'RE HERE FOR YOU! BOOK FOR YOUR BIRTHDAY EVENTS OR
-                CORPORATE EVENTS OR INQUIRE ABOUT EVENT CATERING.
+                {Description.planningEvent.description}
               </p>
             </div>
 
             {/* Features List */}
             <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-300">
-                  Professional event planning and coordination
-                </p>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-300">
-                  Customized menu options for all dietary requirements
-                </p>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-300">
-                  Full-service catering for events of all sizes
-                </p>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-300">
-                  Complete setup and decoration services available
-                </p>
-              </div>
+              {Description.planningEvent.features.map((feature, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-300">{feature}</p>
+                </div>
+              ))}
             </div>
 
             {/* CTA Button */}
@@ -87,7 +69,7 @@ const PlanningAnEvent = () => {
                 href={APP_URL.event}
                 className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl inline-block"
               >
-                Send Event Enquiry
+                {Description.planningEvent.button}
               </Link>
             </div>
           </div>

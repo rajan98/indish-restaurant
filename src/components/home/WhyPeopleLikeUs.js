@@ -1,13 +1,13 @@
 import Link from "next/link";
 import APP_URL from "../../constants/url";
+import Description from "../../constants/descriptions";
 
 const WhyPeopleLoveUs = () => {
   const features = [
     {
       id: 1,
-      title: "Exceptional Service",
-      description:
-        "Our dedicated staff goes above and beyond to ensure that every guest feels welcome and well-cared for. From the moment you walk in, you'll experience our commitment to providing outstanding service.",
+      title: Description.whyPeopleLikeUs.features[0].title,
+      description: Description.whyPeopleLikeUs.features[0].description,
       icon: (
         <div className="relative">
           {/* Hand with stars icon */}
@@ -41,9 +41,8 @@ const WhyPeopleLoveUs = () => {
     },
     {
       id: 2,
-      title: "Authentic Flavors with a Modern Twist",
-      description:
-        "Our menu reimagines classic Indian dishes with contemporary flair, creating a unique culinary experience that honors tradition while embracing innovation. Each bite is a perfect blend of familiar and exciting flavors.",
+      title: Description.whyPeopleLikeUs.features[1].title,
+      description: Description.whyPeopleLikeUs.features[1].description,
       icon: (
         <div className="relative">
           {/* Ice cream/dessert with sparkles */}
@@ -86,9 +85,8 @@ const WhyPeopleLoveUs = () => {
     },
     {
       id: 3,
-      title: "Fresh, Seasonal Ingredients",
-      description:
-        "We take pride in using only the freshest, seasonal ingredients to craft our dishes. This commitment to quality ensures that every meal is vibrant, flavorful, and nourishing.",
+      title: Description.whyPeopleLikeUs.features[2].title,
+      description: Description.whyPeopleLikeUs.features[2].description,
       icon: (
         <div className="relative">
           {/* Layered ingredients/pancakes */}
@@ -144,16 +142,14 @@ const WhyPeopleLoveUs = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
               <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
-                WHY PEOPLE LOVE US
+                {Description.whyPeopleLikeUs.sectionLabel}
               </span>
               <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
             </div>
 
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                At Mehmaan, we are passionate about delivering an exceptional
-                dining experience that combines the best of traditional Indian
-                cuisine with modern innovation.
+                {Description.whyPeopleLikeUs.headerDescription}
               </p>
             </div>
           </div>
@@ -189,17 +185,16 @@ const WhyPeopleLoveUs = () => {
           <div className="text-center mt-16">
             <div className="max-w-2xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Experience the Difference Today
+                {Description.whyPeopleLikeUs.cta.title}
               </h3>
               <p className="text-gray-300 mb-8 text-lg">
-                Join us for an unforgettable culinary journey that celebrates
-                the rich heritage of Indian cuisine.
+                {Description.whyPeopleLikeUs.cta.description}
               </p>
               <Link
                 href={APP_URL.book_table}
                 className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl inline-block"
               >
-                Make a Reservation
+                {Description.whyPeopleLikeUs.cta.button}
               </Link>
             </div>
           </div>

@@ -13,6 +13,8 @@ const dailyOffer = {
   },
   wineLicense: "BYO Wine Only (Fully Licensed)",
   reserveButton: "RESERVE TABLE",
+
+  // Bottom Features
   features: {
     mainHeading: "Unveiling modern Indian flavors in a fine-dining experience.",
     qualityFood: {
