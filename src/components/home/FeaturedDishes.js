@@ -2,9 +2,11 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronRight, Star } from "lucide-react";
 import Link from "next/link";
-import React, { useCallback } from "react";
-import Description from "../../constants/descriptions";
+import React, { useCallback, useState } from "react";
+import APP_CONSTANTS from "../../constants/app_constants";
 import APP_URL from "../../constants/url";
+import Description from "../../constants/descriptions";
+import StoreOpeningPopup from "../ui/Popup";
 
 const usePrevNextButtons = (emblaApi, onButtonClick) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = React.useState(true);
@@ -75,6 +77,9 @@ const NextButton = ({ onClick, disabled }) => (
 );
 
 const FeaturedDishes = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [pendingUrl, setPendingUrl] = useState("");
+
   const options = {
     align: "start",
     loop: true,
@@ -105,97 +110,139 @@ const FeaturedDishes = () => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi, onNavButtonClick);
 
+  const handleNavigation = (e, href) => {
+    if (!APP_CONSTANTS.opened) {
+      const externalLinks = [APP_URL.order];
+
+      if (externalLinks.includes(href)) {
+        e.preventDefault();
+        setPendingUrl(href);
+        setShowPopup(true);
+        return;
+      }
+    }
+  };
+
+  // Handle popup confirmation
+  const handleConfirm = () => {
+    setShowPopup(false);
+    window.location.href = pendingUrl;
+    setPendingUrl("");
+  };
+
+  // Handle popup cancellation
+  const handleCancel = () => {
+    setShowPopup(false);
+    setPendingUrl("");
+  };
+
   return (
-    <section className="py-16 bg-black text-white relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
-            <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
-              FOOD MENU
-            </span>
-            <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+    <>
+      <section className="py-16 bg-black text-white relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+              <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
+                FOOD MENU
+              </span>
+              <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Our Specials Menu
+            </h2>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our Specials Menu
-          </h2>
-        </div>
 
-        {/* Embla Carousel */}
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          {/* Embla Carousel */}
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
 
-          {/* Carousel Viewport */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
-              {Description.featuredFood.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex-none w-full sm:w-1/2 lg:w-1/4 px-3"
-                >
-                  <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-orange-500/30 transition-all duration-300 group h-full">
-                    {/* Image */}
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                        <Star size={14} fill="currentColor" />
-                        {item.rating}
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors duration-300">
-                        {item.name}
-                      </h3>
-                      <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
-                        {item.description}
-                      </p>
-
-                      {/* Pricing */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-gray-500 line-through text-sm">
-                          {item.originalPrice}
-                        </span>
-                        <span className="text-orange-400 font-bold text-xl">
-                          {item.price}
-                        </span>
+            {/* Carousel Viewport */}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {Description.featuredFood.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex-none w-full sm:w-1/2 lg:w-1/4 px-3"
+                  >
+                    <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-orange-500/30 transition-all duration-300 group h-full">
+                      {/* Image */}
+                      <div className="relative overflow-hidden">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+                          <Star size={14} fill="currentColor" />
+                          {item.rating}
+                        </div>
                       </div>
 
-                      {/* Order Button */}
-                      <Link
-                        href={APP_URL.order}
-                        className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                      >
-                        Order Now
-                        <ChevronRight size={16} />
-                      </Link>
+                      {/* Content */}
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors duration-300">
+                          {item.name}
+                        </h3>
+                        <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
+                          {item.description}
+                        </p>
+
+                        {/* Pricing */}
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-gray-500 line-through text-sm">
+                            {item.originalPrice}
+                          </span>
+                          <span className="text-orange-400 font-bold text-xl">
+                            {item.price}
+                          </span>
+                        </div>
+
+                        {/* Order Button */}
+                        <Link
+                          href={APP_URL.order}
+                          onClick={(e) => handleNavigation(e, APP_URL.order)}
+                          className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                        >
+                          Order Now
+                          <ChevronRight size={16} />
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Custom Styles */}
-        <style jsx>{`
-          .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-          }
-        `}</style>
-      </div>
-    </section>
+          {/* Custom Styles */}
+          <style jsx>{`
+            .line-clamp-3 {
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          `}</style>
+        </div>
+      </section>
+
+      {/* Store Opening Popup */}
+      <StoreOpeningPopup
+        isOpen={showPopup}
+        onConfirm={handleConfirm}
+        onCancel={handleCancel}
+      />
+    </>
   );
 };
 
