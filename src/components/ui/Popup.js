@@ -37,7 +37,7 @@ const StoreOpeningPopup = ({
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 md:text-lg text-sm">
               {message ? (
                 message
               ) : (
@@ -56,13 +56,13 @@ const StoreOpeningPopup = ({
           <div className="flex gap-3">
             <button
               onClick={onCancel}
-              className="flex-1 px-4 py-3 bg-gray-100 text-gray-800 rounded-xl font-medium hover:bg-gray-200 transition-colors duration-200"
+              className="flex-1 md:px-4 px-2 py-3 bg-gray-100 text-gray-800 rounded-xl font-medium hover:bg-gray-200 transition-colors duration-200 md:text-md text-sm"
             >
               {cancelText}
             </button>
             <button
               onClick={onConfirm}
-              className="flex-1 px-4 py-3 bg-orange-500 text-white rounded-xl font-medium hover:bg-orange-600 transition-colors duration-200"
+              className="flex-1 md:px-4 px-2 py-3 bg-orange-500 text-white rounded-xl font-medium hover:bg-orange-600 transition-colors duration-200 md:text-md text-sm"
             >
               {confirmText}
             </button>
