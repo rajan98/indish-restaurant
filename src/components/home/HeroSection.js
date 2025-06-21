@@ -68,14 +68,14 @@ const HeroSection = () => {
         <div className="container-custom relative z-10">
           <div className="text-center text-white max-w-4xl mx-auto">
             {/* Subtitle */}
-            <p className="text-primary-300 text-lg md:text-xl font-medium mb-4 tracking-wide">
+            <p className="text-white text-lg md:text-xl font-medium mb-4 tracking-wide">
               {Description.hero.subtitle}
             </p>
 
             {/* Main Title */}
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-shadow">
               {Description.hero.title.main}{" "}
-              <span className="text-primary-400">{Description.hero.title.highlighted}</span>
+              <span className="text-white">{Description.hero.title.highlighted}</span>
             </h2>
 
             {/* Description */}

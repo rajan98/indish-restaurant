@@ -38,15 +38,6 @@ const AboutSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              {/* Front Image - Overlapping */}
-              <div className="absolute bottom-0 right-0 lg:bottom-[-90px] lg:right-[-30px] w-[70%] h-[280px] lg:h-[350px] rounded-2xl overflow-hidden shadow-2xl hidden lg:block">
-                <img
-                  src="/images/Home/AboutSection/AboutFood2.webp"
-                  alt="Fusion Indian cuisine in a modern plating style"
-                  className="w-full h-full object-cover"
-                />
-              </div>
             </div>
           </div>
 
