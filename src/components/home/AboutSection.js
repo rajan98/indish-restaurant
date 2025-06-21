@@ -58,7 +58,7 @@ const AboutSection = () => {
               </p>
 
               <Link
-                href={APP_URL.menu}
+                href={APP_URL.about}
                 className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl inline-block"
               >
                 {Description.about.button}

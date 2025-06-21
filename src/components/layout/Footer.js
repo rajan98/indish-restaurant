@@ -11,8 +11,8 @@ import Link from "next/link";
 import { useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
 import APP_URL from "../../constants/url";
-import SiteLogo from "../ui/SiteLogo";
 import StoreOpeningPopup from "../ui/Popup";
+import SiteLogo from "../ui/SiteLogo";
 
 const Footer = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -150,13 +150,7 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">
-                      Shop 1/167 Pacific Hwy
-                      <br />
-                      Hornsby NSW 2077
-                      <br />
-                      Australia
-                    </p>
+                    {APP_CONSTANTS.full_address_line1} <br/> {APP_CONSTANTS.full_address_line2}
                   </div>
                 </div>
 
@@ -167,6 +161,15 @@ const Footer = () => {
                     className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
                   >
                     {APP_CONSTANTS.phone_number1}
+                  </Link>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-primary-400" />
+                  <Link
+                    href={`tel:${APP_CONSTANTS.phone_number2}`}
+                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
+                  >
+                    {APP_CONSTANTS.phone_number2}
                   </Link>
                 </div>
 
@@ -184,7 +187,7 @@ const Footer = () => {
                   <Clock className="w-5 h-5 text-primary-400 mt-1" />
                   <div className="text-gray-300">
                     <p className="font-medium">Opening Hours:</p>
-                    <p>Mon - Sun: 5:00 PM - 10:00 PM</p>
+                    <p>{APP_CONSTANTS.opening}</p>
                   </div>
                 </div>
               </div>
@@ -199,26 +202,6 @@ const Footer = () => {
                 {`${APP_CONSTANTS.company_name_title_case} Modern Indian Cuisine. All
                 rights reserved.`}
               </p>
-              <div className="flex space-x-6 text-sm">
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
-                >
-                  Cookie Policy
-                </Link>
-              </div>
             </div>
           </div>
         </div>

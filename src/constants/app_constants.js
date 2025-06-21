@@ -4,7 +4,8 @@ const APP_CONSTANTS = {
     phone_number2: "(04) 2584 0009",
     short_location: "6/115 Darby Street, Australia",
     full_address_line1: "6/115 Darby Street",
-    full_address_line2: "Cooks Hill",
+    full_address_line2: "Cooks Hill, Australia",
+
     website_url: "indish.com.au",
     full_website_url: "https://www.indish.com.au/",
     opening: "Mon-Fri: 11am-2pm, 5-10pm | Sat-Sun: 9am-2pm, 5-10pm",
