@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
-import APP_URL from "../../constants/url";
 import Description from "../../constants/descriptions";
+import APP_URL from "../../constants/url";
 import StoreOpeningPopup from "../ui/Popup";
 
 const PlanningAnEvent = () => {
@@ -74,7 +74,7 @@ const PlanningAnEvent = () => {
 
               {/* Event Types */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-orange-400">
+                <h3 className="text-2xl font-bold text-primary-400">
                   {Description.planningEvent.eventTypes}
                 </h3>
               </div>
@@ -90,7 +90,7 @@ const PlanningAnEvent = () => {
               <div className="space-y-4">
                 {Description.planningEvent.features.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary-400 rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-lg text-gray-300">{feature}</p>
                   </div>
                 ))}
@@ -113,7 +113,7 @@ const PlanningAnEvent = () => {
         {/* Decorative Elements */}
         <div className="absolute top-20 right-10 opacity-20">
           <svg
-            className="w-8 h-8 text-orange-400"
+            className="w-8 h-8 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -122,7 +122,7 @@ const PlanningAnEvent = () => {
         </div>
         <div className="absolute bottom-20 left-10 opacity-20">
           <svg
-            className="w-6 h-6 text-orange-400"
+            className="w-6 h-6 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >

@@ -167,7 +167,7 @@ export default function FoodMenuComponent() {
               aria-describedby={`food-tab-desc-${tab.id}`}
               className={`px-6 py-3 font-semibold text-sm tracking-wider transition-all duration-300 rounded-md mx-1 ${
                 activeTab === tab.id
-                  ? "bg-orange-500 text-white shadow-md"
+                  ? "bg-primary-500 text-white shadow-md"
                   : "text-gray-600 hover:bg-gray-100"
               }`}
             >

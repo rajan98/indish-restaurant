@@ -4,8 +4,8 @@ import { ChevronRight, Star } from "lucide-react";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
-import APP_URL from "../../constants/url";
 import Description from "../../constants/descriptions";
+import APP_URL from "../../constants/url";
 import StoreOpeningPopup from "../ui/Popup";
 
 const usePrevNextButtons = (emblaApi, onButtonClick) => {
@@ -46,7 +46,7 @@ const usePrevNextButtons = (emblaApi, onButtonClick) => {
 
 const PrevButton = ({ onClick, disabled }) => (
   <button
-    className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-gray-800/80 hover:bg-orange-500 text-white p-3 rounded-full transition-all duration-300 -ml-6 disabled:opacity-50 disabled:cursor-not-allowed"
+    className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-gray-800/80 hover:bg-primary-500 text-white p-3 rounded-full transition-all duration-300 -ml-6 disabled:opacity-50 disabled:cursor-not-allowed"
     type="button"
     onClick={onClick}
     disabled={disabled}
@@ -62,7 +62,7 @@ const PrevButton = ({ onClick, disabled }) => (
 
 const NextButton = ({ onClick, disabled }) => (
   <button
-    className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-gray-800/80 hover:bg-orange-500 text-white p-3 rounded-full transition-all duration-300 -mr-6 disabled:opacity-50 disabled:cursor-not-allowed"
+    className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-gray-800/80 hover:bg-primary-500 text-white p-3 rounded-full transition-all duration-300 -mr-6 disabled:opacity-50 disabled:cursor-not-allowed"
     type="button"
     onClick={onClick}
     disabled={disabled}
@@ -143,11 +143,11 @@ const FeaturedDishes = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
-              <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
+              <div className="h-px bg-gradient-to-r from-transparent via-primary-50 to-transparent w-32"></div>
+              <span className="mx-4 text-primary-50 text-sm tracking-wider font-medium">
                 FOOD MENU
               </span>
-              <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+              <div className="h-px bg-gradient-to-r from-transparent via-primary-50 to-transparent w-32"></div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Our Specials Menu
@@ -174,7 +174,7 @@ const FeaturedDishes = () => {
                     key={item.id}
                     className="flex-none w-full sm:w-1/2 lg:w-1/4 px-3"
                   >
-                    <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-orange-500/30 transition-all duration-300 group h-full">
+                    <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-primary-500/30 transition-all duration-300 group h-full">
                       {/* Image */}
                       <div className="relative overflow-hidden">
                         <img
@@ -182,7 +182,7 @@ const FeaturedDishes = () => {
                           alt={item.name}
                           className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+                        <div className="absolute top-3 left-3 bg-primary-500 text-white px-2 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
                           <Star size={14} fill="currentColor" />
                           {item.rating}
                         </div>
@@ -190,7 +190,7 @@ const FeaturedDishes = () => {
 
                       {/* Content */}
                       <div className="p-6">
-                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors duration-300">
+                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary-50 transition-colors duration-300">
                           {item.name}
                         </h3>
                         <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
@@ -202,7 +202,7 @@ const FeaturedDishes = () => {
                           <span className="text-gray-500 line-through text-sm">
                             {item.originalPrice}
                           </span>
-                          <span className="text-orange-400 font-bold text-xl">
+                          <span className="text-primary-50 font-bold text-xl">
                             {item.price}
                           </span>
                         </div>
@@ -211,7 +211,7 @@ const FeaturedDishes = () => {
                         <Link
                           href={APP_URL.order}
                           onClick={(e) => handleNavigation(e, APP_URL.order)}
-                          className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                          className="w-full bg-primary-500 hover:bg-primary-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                         >
                           Order Now
                           <ChevronRight size={16} />

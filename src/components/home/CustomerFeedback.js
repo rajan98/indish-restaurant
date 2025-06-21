@@ -101,11 +101,11 @@ const CustomerFeedback = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
-            <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
-            <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
+            <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
+            <span className="mx-4 text-primary-400 text-sm tracking-wider font-medium">
               {Description.customerFeedbacks.title}
             </span>
-            <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             {Description.customerFeedbacks.subTitle}
@@ -145,7 +145,7 @@ const CustomerFeedback = () => {
                             <Star
                               key={i}
                               size={24}
-                              className="text-orange-400 fill-current"
+                              className="text-primary-400 fill-current"
                             />
                           ))}
                           <span className="text-gray-400 text-lg ml-2">
@@ -164,7 +164,7 @@ const CustomerFeedback = () => {
                         </p>
 
                         {/* Divider */}
-                        <div className="w-24 h-px bg-orange-400"></div>
+                        <div className="w-24 h-px bg-primary-400"></div>
 
                         {/* Customer Name */}
                         <h4 className="text-xl font-semibold text-white">
@@ -187,7 +187,7 @@ const CustomerFeedback = () => {
               onClick={() => onDotButtonClick(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === selectedIndex
-                  ? "bg-orange-500 scale-125"
+                  ? "bg-primary-500 scale-125"
                   : "bg-gray-600 hover:bg-gray-400"
               }`}
             />
@@ -221,7 +221,7 @@ const CustomerFeedback = () => {
                             <Star
                               key={i}
                               size={20}
-                              className="text-orange-400 fill-current"
+                              className="text-primary-400 fill-current"
                             />
                           ))}
                           <span className="text-gray-400 ml-2">
@@ -234,7 +234,7 @@ const CustomerFeedback = () => {
                         <p className="text-gray-300 leading-relaxed text-sm">
                           {testimonial.review}
                         </p>
-                        <div className="w-16 h-px bg-orange-400 mx-auto"></div>
+                        <div className="w-16 h-px bg-primary-400 mx-auto"></div>
                         <h4 className="text-lg font-semibold text-white">
                           {testimonial.name}
                         </h4>
@@ -253,7 +253,7 @@ const CustomerFeedback = () => {
                   onClick={() => onDotButtonClickMobile(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === selectedIndexMobile
-                      ? "bg-orange-500 scale-125"
+                      ? "bg-primary-500 scale-125"
                       : "bg-gray-600 hover:bg-gray-400"
                   }`}
                 />

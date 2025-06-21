@@ -36,7 +36,7 @@ export default function EachPageLayout({ children, title }) {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#f46a1f"
+              stroke="#FF0038"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"

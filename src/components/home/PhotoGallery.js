@@ -1,9 +1,9 @@
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import React, { useCallback } from "react";
 import APP_URL from "../../constants/url";
-import Link from "next/link";
 
 // Dot Buttons Hook
 const useDotButton = (emblaApi, onButtonClick) => {
@@ -87,7 +87,7 @@ const DotButton = ({ onClick, className }) => (
 // Arrow Button Components
 const PrevButton = ({ onClick, disabled }) => (
   <button
-    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-orange-500 text-white p-3 rounded-full transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
+    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-primary-500 text-white p-3 rounded-full transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
     type="button"
     onClick={onClick}
     disabled={disabled}
@@ -98,7 +98,7 @@ const PrevButton = ({ onClick, disabled }) => (
 
 const NextButton = ({ onClick, disabled }) => (
   <button
-    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-orange-500 text-white p-3 rounded-full transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
+    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-primary-500 text-white p-3 rounded-full transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
     type="button"
     onClick={onClick}
     disabled={disabled}
@@ -187,11 +187,11 @@ const PhotoGallery = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
-            <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
-            <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
+            <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
+            <span className="mx-4 text-primary-400 text-sm tracking-wider font-medium">
               FOOD ITEM
             </span>
-            <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Photo Gallery</h2>
         </div>
@@ -237,7 +237,7 @@ const PhotoGallery = () => {
                 onClick={() => onDotButtonClick(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === selectedIndex
-                    ? "bg-orange-500 scale-125"
+                    ? "bg-primary-500 scale-125"
                     : "bg-gray-600 hover:bg-gray-400"
                 }`}
               />

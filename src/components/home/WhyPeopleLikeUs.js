@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useState } from "react";
 import APP_CONSTANTS from "../../constants/app_constants";
+import Description from "../../constants/descriptions";
 import APP_URL from "../../constants/url";
 import StoreOpeningPopup from "../ui/Popup";
-import Description from "../../constants/descriptions";
 
 const WhyPeopleLoveUs = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -44,7 +44,7 @@ const WhyPeopleLoveUs = () => {
         <div className="relative">
           {/* Hand with stars icon */}
           <svg
-            className="w-12 h-12 text-orange-400"
+            className="w-12 h-12 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -79,7 +79,7 @@ const WhyPeopleLoveUs = () => {
         <div className="relative">
           {/* Ice cream/dessert with sparkles */}
           <svg
-            className="w-12 h-12 text-orange-400"
+            className="w-12 h-12 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -123,7 +123,7 @@ const WhyPeopleLoveUs = () => {
         <div className="relative">
           {/* Layered ingredients/pancakes */}
           <svg
-            className="w-12 h-12 text-orange-400"
+            className="w-12 h-12 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -173,11 +173,11 @@ const WhyPeopleLoveUs = () => {
             {/* Header Section */}
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
-                <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
-                <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
+                <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
+                <span className="mx-4 text-primary-400 text-sm tracking-wider font-medium">
                   {Description.whyPeopleLikeUs.sectionLabel}
                 </span>
-                <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
               </div>
 
               <div className="max-w-4xl mx-auto">
@@ -192,17 +192,17 @@ const WhyPeopleLoveUs = () => {
               {features.map((feature) => (
                 <div
                   key={feature.id}
-                  className="bg-black/60 border border-gray-700 rounded-2xl p-8 hover:border-orange-400/50 transition-all duration-300 group hover:transform hover:scale-105"
+                  className="bg-black/60 border border-gray-700 rounded-2xl p-8 hover:border-primary-400/50 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="p-4 bg-gray-800/50 rounded-full group-hover:bg-orange-400/10 transition-all duration-300">
+                    <div className="p-4 bg-gray-800/50 rounded-full group-hover:bg-primary-400/10 transition-all duration-300">
                       {feature.icon}
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4 group-hover:text-orange-400 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-4 group-hover:text-primary-400 transition-colors duration-300">
                     {feature.title}
                   </h3>
 
@@ -238,7 +238,7 @@ const WhyPeopleLoveUs = () => {
         {/* Decorative Elements */}
         <div className="absolute top-10 left-10 opacity-20">
           <svg
-            className="w-8 h-8 text-orange-400"
+            className="w-8 h-8 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -247,7 +247,7 @@ const WhyPeopleLoveUs = () => {
         </div>
         <div className="absolute bottom-10 right-10 opacity-20">
           <svg
-            className="w-6 h-6 text-orange-400"
+            className="w-6 h-6 text-primary-400"
             fill="currentColor"
             viewBox="0 0 24 24"
           >

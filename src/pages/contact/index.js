@@ -52,8 +52,8 @@ export default function index() {
                 {/* Address */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                      <Home size={24} className="text-orange-400" />
+                    <div className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center">
+                      <Home size={24} className="text-primary-400" />
                     </div>
                   </div>
                   <div>
@@ -71,8 +71,8 @@ export default function index() {
                 {/* Phone Numbers */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                      <Phone size={24} className="text-orange-400" />
+                    <div className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center">
+                      <Phone size={24} className="text-primary-400" />
                     </div>
                   </div>
                   <div>
@@ -83,7 +83,7 @@ export default function index() {
                       <p className="text-gray-300">
                         <Link
                           href={`tel:${APP_CONSTANTS.phone_number1}`}
-                          className="hover:text-orange-400 transition-colors duration-300"
+                          className="hover:text-primary-400 transition-colors duration-300"
                         >
                           {APP_CONSTANTS.phone_number1}
                         </Link>
@@ -91,7 +91,7 @@ export default function index() {
                       <p className="text-gray-300">
                         <Link
                           href={`tel:${APP_CONSTANTS.phone_number2}`}
-                          className="hover:text-orange-400 transition-colors duration-300"
+                          className="hover:text-primary-400 transition-colors duration-300"
                         >
                           {APP_CONSTANTS.phone_number2}
                         </Link>
@@ -103,8 +103,8 @@ export default function index() {
                 {/* Email */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                      <Mail size={24} className="text-orange-400" />
+                    <div className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center">
+                      <Mail size={24} className="text-primary-400" />
                     </div>
                   </div>
                   <div>
@@ -114,7 +114,7 @@ export default function index() {
                     <p className="text-gray-300">
                       <Link
                         href={`mailto:${APP_CONSTANTS.email}`}
-                        className="hover:text-orange-400 transition-colors duration-300"
+                        className="hover:text-primary-400 transition-colors duration-300"
                       >
                         {APP_CONSTANTS.email}
                       </Link>
@@ -125,8 +125,8 @@ export default function index() {
                 {/* Website */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                      <Globe size={24} className="text-orange-400" />
+                    <div className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center">
+                      <Globe size={24} className="text-primary-400" />
                     </div>
                   </div>
                   <div>
@@ -138,7 +138,7 @@ export default function index() {
                         href={APP_CONSTANTS.website_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-orange-400 transition-colors duration-300"
+                        className="hover:text-primary-400 transition-colors duration-300"
                       >
                         {APP_CONSTANTS.website_url}
                       </Link>
@@ -170,7 +170,7 @@ export default function index() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                       />
                     </div>
                     <div>
@@ -181,7 +181,7 @@ export default function index() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                       />
                     </div>
                   </div>
@@ -196,7 +196,7 @@ export default function index() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                       />
                     </div>
                     <div>
@@ -207,7 +207,7 @@ export default function index() {
                         value={formData.subject}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                       />
                     </div>
                   </div>
@@ -221,7 +221,7 @@ export default function index() {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 resize-vertical text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 resize-vertical text-gray-900 placeholder-gray-500"
                     ></textarea>
                   </div>
 
@@ -229,7 +229,7 @@ export default function index() {
                   <div>
                     <button
                       type="submit"
-                      className="bg-gray-800 hover:bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      className="bg-gray-800 hover:bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                       Submit Now
                     </button>
@@ -242,7 +242,7 @@ export default function index() {
           {/* Decorative Elements */}
           <div className="absolute top-20 left-10 opacity-20">
             <svg
-              className="w-8 h-8 text-orange-400"
+              className="w-8 h-8 text-primary-400"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -251,7 +251,7 @@ export default function index() {
           </div>
           <div className="absolute bottom-20 right-10 opacity-20">
             <svg
-              className="w-6 h-6 text-orange-400"
+              className="w-6 h-6 text-primary-400"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

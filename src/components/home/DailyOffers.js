@@ -91,10 +91,10 @@ const DailyOffers = () => {
               {/* Daily Offer Header */}
               <div>
                 <div className="flex items-center mb-4">
-                  <span className="text-orange-400 text-sm tracking-wider font-medium">
+                  <span className="text-primary-400 text-sm tracking-wider font-medium">
                     {Description.dailyOffer.dailyOfferLabel}
                   </span>
-                  <div className="ml-4 h-px bg-gradient-to-r from-orange-400 to-transparent w-24"></div>
+                  <div className="ml-4 h-px bg-gradient-to-r from-primary-400 to-transparent w-24"></div>
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
                   {Description.dailyOffer.mainOffer}
@@ -119,19 +119,19 @@ const DailyOffers = () => {
                 <div className="flex flex-col space-y-2">
                   <Link
                     href={`tel:${APP_CONSTANTS.phone_number1}`}
-                    className="text-lg text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                    className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
                   >
                     {APP_CONSTANTS.phone_number1}
                   </Link>
                   <Link
                     href={`tel:${APP_CONSTANTS.phone_number2}`}
-                    className="text-lg text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                    className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
                   >
                     {APP_CONSTANTS.phone_number2}
                   </Link>
                   <Link
                     href={`mailto:${APP_CONSTANTS.email}`}
-                    className="text-lg text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                    className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
                   >
                     {APP_CONSTANTS.email}
                   </Link>
@@ -179,11 +179,11 @@ const DailyOffers = () => {
                 </div>
 
                 {/* Center - Quality Food */}
-                <div className="bg-black/40 border border-orange-400/30 rounded-xl p-6 hover:border-orange-400/60 transition-all duration-300">
+                <div className="bg-black/40 border border-primary-400/30 rounded-xl p-6 hover:border-primary-400/60 transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-orange-400/20 rounded-full flex items-center justify-center border-2 border-orange-400">
+                    <div className="w-12 h-12 bg-primary-400/20 rounded-full flex items-center justify-center border-2 border-primary-400">
                       <svg
-                        className="w-6 h-6 text-orange-400"
+                        className="w-6 h-6 text-primary-400"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -200,11 +200,11 @@ const DailyOffers = () => {
                 </div>
 
                 {/* Right - Perfect Taste */}
-                <div className="bg-black/40 border border-orange-400/30 rounded-xl p-6 hover:border-orange-400/60 transition-all duration-300">
+                <div className="bg-black/40 border border-primary-400/30 rounded-xl p-6 hover:border-primary-400/60 transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-orange-400/20 rounded-full flex items-center justify-center border-2 border-orange-400">
+                    <div className="w-12 h-12 bg-primary-400/20 rounded-full flex items-center justify-center border-2 border-primary-400">
                       <svg
-                        className="w-6 h-6 text-orange-400"
+                        className="w-6 h-6 text-primary-400"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -233,11 +233,11 @@ const DailyOffers = () => {
                 {/* Features */}
                 <div className="space-y-4">
                   {/* Quality Food */}
-                  <div className="bg-black/40 border border-orange-400/30 rounded-xl p-4">
+                  <div className="bg-black/40 border border-primary-400/30 rounded-xl p-4">
                     <div className="flex items-start space-x-4">
-                      <div className="w-10 h-10 bg-orange-400/20 rounded-full flex items-center justify-center border-2 border-orange-400 flex-shrink-0 mt-1">
+                      <div className="w-10 h-10 bg-primary-400/20 rounded-full flex items-center justify-center border-2 border-primary-400 flex-shrink-0 mt-1">
                         <svg
-                          className="w-5 h-5 text-orange-400"
+                          className="w-5 h-5 text-primary-400"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -261,11 +261,11 @@ const DailyOffers = () => {
                   </div>
 
                   {/* Perfect Taste */}
-                  <div className="bg-black/40 border border-orange-400/30 rounded-xl p-4">
+                  <div className="bg-black/40 border border-primary-400/30 rounded-xl p-4">
                     <div className="flex items-start space-x-4">
-                      <div className="w-10 h-10 bg-orange-400/20 rounded-full flex items-center justify-center border-2 border-orange-400 flex-shrink-0 mt-1">
+                      <div className="w-10 h-10 bg-primary-400/20 rounded-full flex items-center justify-center border-2 border-primary-400 flex-shrink-0 mt-1">
                         <svg
-                          className="w-5 h-5 text-orange-400"
+                          className="w-5 h-5 text-primary-400"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >

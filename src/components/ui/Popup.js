@@ -21,9 +21,9 @@ const StoreOpeningPopup = ({
         <div className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
-                className="w-8 h-8 text-orange-500"
+                className="w-8 h-8 text-primary-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ const StoreOpeningPopup = ({
               ) : (
                 <>
                   The store will open on{" "}
-                  <span className="font-semibold text-orange-600">
+                  <span className="font-semibold text-primary-600">
                     {APP_CONSTANTS.openingDate}
                   </span>
                   . Are you sure you want to proceed?
@@ -62,7 +62,7 @@ const StoreOpeningPopup = ({
             </button>
             <button
               onClick={onConfirm}
-              className="flex-1 md:px-4 px-2 py-3 bg-orange-500 text-white rounded-xl font-medium hover:bg-orange-600 transition-colors duration-200 md:text-md text-sm"
+              className="flex-1 md:px-4 px-2 py-3 bg-primary-500 text-white rounded-xl font-medium hover:bg-primary-600 transition-colors duration-200 md:text-md text-sm"
             >
               {confirmText}
             </button>

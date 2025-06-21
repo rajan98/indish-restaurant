@@ -1,7 +1,7 @@
+import Head from "next/head";
 import { useState } from "react";
 import EachPageLayout from "../../components/layout/EachPageLayout";
 import APP_CONSTANTS from "../../constants/app_constants";
-import Head from "next/head";
 
 const index = () => {
   const [formData, setFormData] = useState({
@@ -70,7 +70,7 @@ const index = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
+                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
                     />
                   </div>
                   <div>
@@ -81,7 +81,7 @@ const index = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
+                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
                     />
                   </div>
                 </div>
@@ -96,7 +96,7 @@ const index = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
+                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
                     />
                   </div>
                   <div>
@@ -107,7 +107,7 @@ const index = () => {
                       value={formData.eventEnquiry}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
+                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500 text-lg"
                     />
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const index = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 resize-vertical text-gray-900 placeholder-gray-500 text-lg"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-300 resize-vertical text-gray-900 placeholder-gray-500 text-lg"
                   ></textarea>
                 </div>
 
@@ -129,7 +129,7 @@ const index = () => {
                 <div className="text-center pt-4">
                   <button
                     type="submit"
-                    className="bg-gray-200 hover:bg-orange-500 hover:text-white text-gray-800 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="bg-gray-200 hover:bg-primary-500 hover:text-white text-gray-800 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Submit Now
                   </button>
@@ -153,7 +153,7 @@ const index = () => {
             <div className="mt-12 text-center">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                  <h3 className="text-xl font-semibold text-orange-400 mb-2">
+                  <h3 className="text-xl font-semibold text-primary-400 mb-2">
                     Corporate Events
                   </h3>
                   <p className="text-gray-300 text-sm">
@@ -161,7 +161,7 @@ const index = () => {
                   </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                  <h3 className="text-xl font-semibold text-orange-400 mb-2">
+                  <h3 className="text-xl font-semibold text-primary-400 mb-2">
                     Birthday Celebrations
                   </h3>
                   <p className="text-gray-300 text-sm">
@@ -169,7 +169,7 @@ const index = () => {
                   </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                  <h3 className="text-xl font-semibold text-orange-400 mb-2">
+                  <h3 className="text-xl font-semibold text-primary-400 mb-2">
                     Private Dining
                   </h3>
                   <p className="text-gray-300 text-sm">
@@ -183,7 +183,7 @@ const index = () => {
           {/* Decorative Elements */}
           <div className="absolute top-10 left-10 opacity-20">
             <svg
-              className="w-8 h-8 text-orange-400"
+              className="w-8 h-8 text-primary-400"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -192,7 +192,7 @@ const index = () => {
           </div>
           <div className="absolute top-20 right-20 opacity-20">
             <svg
-              className="w-6 h-6 text-orange-400"
+              className="w-6 h-6 text-primary-400"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -201,7 +201,7 @@ const index = () => {
           </div>
           <div className="absolute bottom-10 left-20 opacity-20">
             <svg
-              className="w-5 h-5 text-orange-400"
+              className="w-5 h-5 text-primary-400"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -210,7 +210,7 @@ const index = () => {
           </div>
           <div className="absolute bottom-20 right-10 opacity-20">
             <svg
-              className="w-4 h-4 text-orange-400"
+              className="w-4 h-4 text-primary-400"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

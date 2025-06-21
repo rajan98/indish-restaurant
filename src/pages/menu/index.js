@@ -277,11 +277,11 @@ export default function MenuPage() {
                 Cuisine
               </h1>
               <div className="flex items-center justify-center mb-4">
-                <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
-                <span className="mx-4 text-orange-400 text-sm tracking-wider font-medium">
+                <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
+                <span className="mx-4 text-primary-400 text-sm tracking-wider font-medium">
                   {`${tabs[activeTab].label}`}
                 </span>
-                <div className="h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent w-32"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent w-32"></div>
               </div>
 
               {/* Tab Navigation with SEO-friendly structure */}
@@ -298,7 +298,7 @@ export default function MenuPage() {
                     aria-controls={`tabpanel-${tab.id}`}
                     className={`px-6 py-3 border-b-2 font-semibold tracking-wider transition-all duration-300 ${
                       activeTab === tab.id
-                        ? "bg-orange-400 text-white border-orange-600"
+                        ? "bg-primary-400 text-white border-primary-600"
                         : "bg-gray-300 text-gray-800 hover:bg-gray-300"
                     }`}
                   >
