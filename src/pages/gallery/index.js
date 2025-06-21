@@ -4,18 +4,14 @@ import APP_CONSTANTS from "../../constants/app_constants";
 
 export default function index() {
   const images = [
-    "/images/Home/AboutSection/Background.webp",
-    "/images/Home/AboutSection/AboutFood1.webp",
-    "/images/Home/AboutSection/AboutFood2.webp",
-    "/images/Home/DailyOffer/1.webp",
     "/images/Home/DailyOffer/2.webp",
     "/images/Home/DailyOffer/3.webp",
-    "/images/Home/DailyOffer/parallx.webp",
-    "/images/Home/FeaturedMenu/item1.webp",
-    "/images/Home/HeroSection/hero-fallback.webp",
     "/images/Home/PhotoGallery/1.webp",
     "/images/Home/PhotoGallery/2.webp",
     "/images/Home/PhotoGallery/3.webp",
+    "/images/Home/PhotoGallery/4.webp",
+    "/images/Home/PhotoGallery/5.webp",
+    "/images/Home/DailyOffer/1.webp",
   ];
   return (
     <>
