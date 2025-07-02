@@ -1,6 +1,6 @@
-# Mehmaan Restaurant Website
+# Indish Restaurant Website
 
-A modern, responsive Next.js website for Mehmaan Modern Indian Cuisine, featuring smooth animations with Framer Motion and beautiful styling with Tailwind CSS.
+A modern, responsive Next.js website for Indish Modern Indian Cuisine, featuring smooth animations with Framer Motion and beautiful styling with Tailwind CSS.
 
 ## 🚀 Features
 
@@ -23,7 +23,7 @@ A modern, responsive Next.js website for Mehmaan Modern Indian Cuisine, featurin
 ## 📁 Project Structure
 
 ```
-mehmaan-restaurant/
+Indish-restaurant/
 ├── public/
 │   ├── images/          # Static images
 │   └── favicon.ico
@@ -46,7 +46,7 @@ mehmaan-restaurant/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd mehmaan-restaurant
+   cd Indish-restaurant
    ```
 
 2. **Install dependencies**

@@ -26,7 +26,7 @@ export default function index() {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 to-blue-900/20" />
               <img
                 src="/images/About/Background.webp"
-                alt="Mehmaan Restaurant Interior"
+                alt="Indish Restaurant Interior"
                 className="w-full h-full object-cover"
               />
             </div>
