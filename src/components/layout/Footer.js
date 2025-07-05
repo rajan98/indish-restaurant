@@ -150,7 +150,8 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                   <div>
-                    {APP_CONSTANTS.full_address_line1} <br/> {APP_CONSTANTS.full_address_line2}
+                    {APP_CONSTANTS.full_address_line1} <br />{" "}
+                    {APP_CONSTANTS.full_address_line2}
                   </div>
                 </div>
 
@@ -164,13 +165,17 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary-400" />
-                  <Link
-                    href={`tel:${APP_CONSTANTS.phone_number2}`}
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
-                  >
-                    {APP_CONSTANTS.phone_number2}
-                  </Link>
+                  {APP_CONSTANTS.phone_number2 && (
+                    <>
+                      <Phone className="w-5 h-5 text-primary-400" />
+                      <Link
+                        href={`tel:${APP_CONSTANTS.phone_number2}`}
+                        className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
+                      >
+                        {APP_CONSTANTS.phone_number2}
+                      </Link>
+                    </>
+                  )}
                 </div>
 
                 <div className="flex items-center space-x-3">

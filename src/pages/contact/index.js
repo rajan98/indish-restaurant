@@ -89,12 +89,14 @@ export default function index() {
                         </Link>
                       </p>
                       <p className="text-gray-300">
-                        <Link
-                          href={`tel:${APP_CONSTANTS.phone_number2}`}
-                          className="hover:text-primary-400 transition-colors duration-300"
-                        >
-                          {APP_CONSTANTS.phone_number2}
-                        </Link>
+                        {APP_CONSTANTS.phone_number2 && (
+                          <Link
+                            href={`tel:${APP_CONSTANTS.phone_number2}`}
+                            className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
+                          >
+                            {APP_CONSTANTS.phone_number2}
+                          </Link>
+                        )}
                       </p>
                     </div>
                   </div>

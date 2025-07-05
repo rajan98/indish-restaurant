@@ -92,7 +92,9 @@ const Header = () => {
                 <div className="flex items-center space-x-2">
                   <Phone size={14} />
                   <span>{APP_CONSTANTS.phone_number1}</span>
-                  <span>{APP_CONSTANTS.phone_number2}</span>
+                  {APP_CONSTANTS.phone_number2 && (
+                    <span>{APP_CONSTANTS.phone_number2}</span>
+                  )}
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin size={14} />
@@ -197,7 +199,9 @@ const Header = () => {
             <div className="flex items-center space-x-2">
               <Phone size={16} />
               <span>{APP_CONSTANTS.phone_number1}</span>
-              <span>{APP_CONSTANTS.phone_number2}</span>
+              {APP_CONSTANTS.phone_number2 && (
+                <span>{APP_CONSTANTS.phone_number2}</span>
+              )}
             </div>
             <div className="flex items-center space-x-2">
               <MapPin size={16} />

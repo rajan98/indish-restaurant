@@ -109,7 +109,7 @@ const DailyOffers = () => {
                 <p className="text-xl text-gray-300">
                   {Description.dailyOffer.openingHours.time}
                 </p>
-                 <p className="text-xl text-gray-300">
+                <p className="text-xl text-gray-300">
                   {Description.dailyOffer.openingHours.time2}
                 </p>
               </div>
@@ -123,12 +123,14 @@ const DailyOffers = () => {
                   >
                     {APP_CONSTANTS.phone_number1}
                   </Link>
-                  <Link
-                    href={`tel:${APP_CONSTANTS.phone_number2}`}
-                    className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
-                  >
-                    {APP_CONSTANTS.phone_number2}
-                  </Link>
+                  {APP_CONSTANTS.phone_number2 && (
+                    <Link
+                      href={`tel:${APP_CONSTANTS.phone_number2}`}
+                      className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"
+                    >
+                      {APP_CONSTANTS.phone_number2}
+                    </Link>
+                  )}
                   <Link
                     href={`mailto:${APP_CONSTANTS.email}`}
                     className="text-lg text-gray-300 hover:text-primary-400 transition-colors duration-300"

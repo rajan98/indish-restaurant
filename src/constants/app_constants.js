@@ -1,7 +1,7 @@
 const APP_CONSTANTS = {
     company_name_title_case: "Indish",
     phone_number1: "(04) 5232 8901",
-    phone_number2: "(04) 2584 0009",
+    phone_number2: "",
     short_location: "6/115 Darby Street, Australia",
     full_address_line1: "6/115 Darby Street",
     full_address_line2: "Cooks Hill, Australia",
@@ -14,7 +14,7 @@ const APP_CONSTANTS = {
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
     opened: false,
-    openingDate: '4th July 2025'
+    openingDate: 'soon'
 }
 
 export default APP_CONSTANTS;

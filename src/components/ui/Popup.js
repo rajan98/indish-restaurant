@@ -11,7 +11,7 @@ const StoreOpeningPopup = ({
 }) => {
   if (!isOpen) return null;
 
-  const defaultMessage = `The store will open on ${APP_CONSTANTS.openingDate}. Are you sure you want to proceed?`;
+  const defaultMessage = `The store will open ${APP_CONSTANTS.openingDate}. Are you sure you want to proceed?`;
 
   return (
     <>
@@ -42,7 +42,7 @@ const StoreOpeningPopup = ({
                 message
               ) : (
                 <>
-                  The store will open on{" "}
+                  The store will open{" "}
                   <span className="font-semibold text-primary-600">
                     {APP_CONSTANTS.openingDate}
                   </span>
