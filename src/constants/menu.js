@@ -71,18 +71,6 @@ const BEVERAGES_MENU = {
       bottle_price: null,
     },
     {
-      name: "Indri Single Malt",
-      location: "Indian single malt whisky",
-      glass_price: "$15",
-      bottle_price: null,
-    },
-    {
-      name: "Amrut",
-      location: "Indian single malt whisky",
-      glass_price: "$15",
-      bottle_price: null,
-    },
-    {
       name: "Johnnie Walker Black Label",
       location: "Blended Scotch whisky",
       glass_price: "$16",
@@ -238,8 +226,8 @@ const BEVERAGES_MENU = {
       bottle_price: null,
     },
     {
-      name: "James Squire Golden Ale",
-      location: "Australian golden ale",
+      name: "James Squire Pale Ale",
+      location: "Australian pale ale",
       glass_price: "$9",
       bottle_price: null,
     },
@@ -288,7 +276,7 @@ const BEVERAGES_MENU = {
   ],
   spirits: [
     {
-      name: "Bacardi Superior White",
+      name: "Bacardi Carta-blanca",
       location: "White Rum",
       glass_price: "$12",
       bottle_price: null,
@@ -336,12 +324,6 @@ const BEVERAGES_MENU = {
       bottle_price: null,
     },
     {
-      name: "Old Monk",
-      location: "Dark Rum",
-      glass_price: "$15",
-      bottle_price: null,
-    },
-    {
       name: "Kraken",
       location: "Dark Rum",
       glass_price: "$15",
@@ -354,12 +336,6 @@ const BEVERAGES_MENU = {
       bottle_price: null,
     },
     {
-      name: "Grand Patron Coffee",
-      location: "Tequila",
-      glass_price: "$16",
-      bottle_price: null,
-    },
-    {
       name: "Grand Patron Silver",
       location: "Tequila",
       glass_price: "$17.50",
@@ -369,24 +345,6 @@ const BEVERAGES_MENU = {
       name: "Chatelle Napoleon VSOP",
       location: "Brandy",
       glass_price: "$14",
-      bottle_price: null,
-    },
-    {
-      name: "Penfolds Grandfather Tawny 10YO",
-      location: "Port",
-      glass_price: "$18",
-      bottle_price: null,
-    },
-    {
-      name: "Martell VSOP Medallion",
-      location: "Cognac",
-      glass_price: "$17",
-      bottle_price: null,
-    },
-    {
-      name: "Hennessy VSOP",
-      location: "Cognac",
-      glass_price: "$18",
       bottle_price: null,
     },
     {
@@ -410,14 +368,8 @@ const BEVERAGES_MENU = {
       bottle_price: null,
     },
     {
-      name: "Pink Lemonade",
-      location: "Refreshing pink lemonade",
-      glass_price: "$5.00",
-      bottle_price: null,
-    },
-    {
-      name: "Lemon Lime Bitters",
-      location: "Classic Australian drink",
+      name: "Lemonade",
+      location: "Refreshing lemonade",
       glass_price: "$5.00",
       bottle_price: null,
     },
@@ -439,15 +391,14 @@ const BEVERAGES_MENU = {
       glass_price: "$8",
       bottle_price: null,
     },
-  ],
-  lassi: [
     {
-      name: "Strawberry and Rose Lassi",
-      location:
-        "Sweet and creamy yogurt drink with strawberry and rose flavors",
-      glass_price: "$6.00",
+      name: "Mineral Water",
+      location: "Pure mineral water",
+      glass_price: "$5",
       bottle_price: null,
     },
+  ],
+  lassi: [
     {
       name: "Mango Lassi",
       location: "Traditional Indian mango yogurt drink",
@@ -457,14 +408,8 @@ const BEVERAGES_MENU = {
   ],
   tea_coffee: [
     {
-      name: "Indian Masala Tea",
-      location: "Aromatic spiced tea blend",
-      glass_price: "$5",
-      bottle_price: null,
-    },
-    {
-      name: "Coffee",
-      location: "Freshly brewed coffee",
+      name: "Kadak Chai",
+      location: "Strong spiced Indian tea",
       glass_price: "$5",
       bottle_price: null,
     },
