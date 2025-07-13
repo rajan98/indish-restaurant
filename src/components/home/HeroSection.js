@@ -57,7 +57,7 @@ const HeroSection = () => {
             Your browser does not support the video tag.
           </video> */}
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[65%_50%] md:object-center"
             src="/images/Hero/hero.webp"
           />
           {/* Video Overlay */}
