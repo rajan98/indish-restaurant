@@ -28,79 +28,49 @@ export default function FoodMenuComponent() {
   const [activeTab, setActiveTab] = useState("all");
 
   const getFilteredMenu = () => {
-    if (activeTab === "all") {
-      return FOOD_MENU;
-    } else if (activeTab === "vegetarian") {
-      return Object.fromEntries(
-        Object.entries(FOOD_MENU).filter(([key]) => 
-          key === 'veg_entrees' || 
-          key === 'chaat_temptations' || 
-          key === 'vegetarian_mains' ||
-          key === 'platters' ||
-          key === 'biryani' ||
-          key === 'atta' ||
-          key === 'rice' ||
-          key === 'dessert' ||
-          key === 'unusual_sides' ||
-          key === 'feast_menu'
-        )
-      );
-    } else if (activeTab === "non_vegetarian") {
-      return Object.fromEntries(
-        Object.entries(FOOD_MENU).filter(([key]) => 
-          key === 'non_veg_entrees' || 
-          key === 'non_vegetarian_mains' || 
-          key === 'lamb_and_goat' || 
-          key === 'beef_dishes' || 
-          key === 'oceans_bounty' ||
-          key === 'platters' ||
-          key === 'biryani' ||
-          key === 'atta' ||
-          key === 'rice' ||
-          key === 'dessert' ||
-          key === 'unusual_sides' ||
-          key === 'feast_menu'
-        )
-      );
-    } else if (activeTab === "vegan") {
-      // Filter items that are specifically marked as vegan
-      const veganMenu = {};
-      Object.entries(FOOD_MENU).forEach(([sectionKey, section]) => {
-        const veganItems = section.items.filter(item => 
-          item.name.includes("(Vegan)") || 
-          section.subtitle?.includes("Vegan")
-        );
-        if (veganItems.length > 0) {
-          veganMenu[sectionKey] = {
-            ...section,
-            items: veganItems
-          };
-        }
-      });
-      return veganMenu;
-    }
-    return FOOD_MENU;
+    const filteredMenu = {};
+    
+    Object.entries(FOOD_MENU).forEach(([sectionKey, section]) => {
+      let filteredItems;
+      
+      if (activeTab === "all") {
+        filteredItems = section.items;
+      } else if (activeTab === "vegetarian") {
+        filteredItems = section.items.filter(item => item.type === "Veg" || item.type === "Vegan");
+      } else if (activeTab === "non_vegetarian") {
+        filteredItems = section.items.filter(item => item.type === "Non-Veg");
+      } else if (activeTab === "vegan") {
+        filteredItems = section.items.filter(item => item.type === "Vegan");
+      }
+
+      // Only include sections with matching items
+      if (filteredItems && filteredItems.length > 0) {
+        filteredMenu[sectionKey] = {
+          ...section,
+          items: filteredItems
+        };
+      }
+    });
+
+    return filteredMenu;
   };
 
-  // Helper function to extract dietary tags from item names
-  const getDietaryTags = (itemName, sectionSubtitle) => {
+  // Helper function to extract dietary tags from item type
+  const getDietaryTags = (itemType) => {
     const tags = [];
-    if (itemName.includes("(Vegan)") || sectionSubtitle?.includes("Vegan"))
-      tags.push("Vegan");
-    if (itemName.includes("(V)") || sectionSubtitle?.includes("Vegetarian"))
-      tags.push("Vegetarian");
-    if (itemName.includes("(GF)") || sectionSubtitle?.includes("Gluten Free"))
-      tags.push("Gluten Free");
-    if (itemName.includes("(N)") || sectionSubtitle?.includes("Contain Nuts"))
-      tags.push("Contains Nuts");
+    if (itemType === "Vegan") tags.push("Vegan");
+    if (itemType === "Veg") tags.push("Vegetarian");
+    if (itemType === "Non-Veg") tags.push("Non-Vegetarian");
+    // Add Gluten Free tag if item name includes "(GF)"
+    if (itemType.name && itemType.name.includes("(GF)")) tags.push("Gluten Free");
     return tags;
   };
 
   // Helper function to determine suitable diet type
-  const getSuitableDiet = (itemName, sectionKey) => {
-    if (itemName.includes("(Vegan)") || sectionKey.includes('vegan')) {
+  const getSuitableDiet = (itemType) => {
+    if (itemType === "Vegan") {
       return "https://schema.org/VeganDiet";
-    } else if (sectionKey.includes('vegetarian') || sectionKey.includes('veg_')) {
+    } else if (itemType === "Veg") {
       return "https://schema.org/VegetarianDiet";
     }
     return null;
@@ -113,8 +83,8 @@ export default function FoodMenuComponent() {
 
     Object.entries(currentMenu).forEach(([sectionKey, section]) => {
       section.items.forEach((item) => {
-        const dietaryTags = getDietaryTags(item.name, section.subtitle);
-        const suitableDiet = getSuitableDiet(item.name, sectionKey);
+        const dietaryTags = getDietaryTags(item.type);
+        const suitableDiet = getSuitableDiet(item.type);
         
         menuItems.push({
           "@type": "MenuItem",
@@ -217,11 +187,8 @@ export default function FoodMenuComponent() {
                   {/* Menu Items with rich markup */}
                   <div className="divide-y divide-gray-200">
                     {section.items.map((item, itemIndex) => {
-                      const dietaryTags = getDietaryTags(
-                        item.name,
-                        section.subtitle
-                      );
-                      const suitableDiet = getSuitableDiet(item.name, sectionKey);
+                      const dietaryTags = getDietaryTags(item.type);
+                      const suitableDiet = getSuitableDiet(item.type);
 
                       return (
                         <div
