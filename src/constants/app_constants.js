@@ -14,7 +14,7 @@ const APP_CONSTANTS = {
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
     opened: false,
-    openingDate: 'soon'
+    openingDate: '17 July 2025'
 }
 
 export default APP_CONSTANTS;

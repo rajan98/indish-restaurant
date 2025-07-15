@@ -42,7 +42,7 @@ const StoreOpeningPopup = ({
                 message
               ) : (
                 <>
-                  The store will open{" "}
+                  The store will open on{" "}
                   <span className="font-semibold text-primary-600">
                     {APP_CONSTANTS.openingDate}
                   </span>
