@@ -5,7 +5,8 @@ const dailyOffer = {
     title: "OPENING HOURS DINNER:",
     time: "MON TO FRI 11:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",
     time2: "SAT TO SUN 9:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",
-  },  
+    closed: "CLOSED ON TUESDAY",
+  },
   reserveButton: "RESERVE TABLE",
 
   // Bottom Features
