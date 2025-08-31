@@ -11,8 +11,6 @@ const StoreOpeningPopup = ({
 }) => {
   if (!isOpen) return null;
 
-  const defaultMessage = `The store will open ${APP_CONSTANTS.openingDate}. Are you sure you want to proceed?`;
-
   return (
     <>
       {/* Backdrop */}
@@ -42,11 +40,7 @@ const StoreOpeningPopup = ({
                 message
               ) : (
                 <>
-                  The store will open on{" "}
-                  <span className="font-semibold text-primary-600">
-                    {APP_CONSTANTS.openingDate}
-                  </span>
-                  . Are you sure you want to proceed?
+                  The store stays closed on <span className="font-semibold text-primary-600">{APP_CONSTANTS.closedDay}</span>. Are you sure you want to proceed?
                 </>
               )}
             </p>

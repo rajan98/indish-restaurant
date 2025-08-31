@@ -13,8 +13,8 @@ const APP_CONSTANTS = {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
-    opened: true,
-    openingDate: '17 July 2025'
+    opened: new Date().getDay() !== 2, // Tuesday
+    closedDay: 'Tuesday'
 }
 
 export default APP_CONSTANTS;
