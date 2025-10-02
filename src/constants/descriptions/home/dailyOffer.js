@@ -2,10 +2,8 @@ const dailyOffer = {
   dailyOfferLabel: "DAILY OFFER",
   mainOffer: "FRESH AUTHENTIC FLAVORS AVAILABLE FOR PICKUP",
   openingHours: {
-    title: "OPENING HOURS DINNER:",
-    time: "MON TO FRI 11:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",
-    time2: "SAT TO SUN 9:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",
-    closed: "CLOSED ON TUESDAY",
+    title: "OPENING HOURS",
+    time: "Monday - Sunday 5:00 pm to 10:00 pm",
   },
   reserveButton: "RESERVE TABLE",
 
