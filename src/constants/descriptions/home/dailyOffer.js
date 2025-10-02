@@ -1,6 +1,6 @@
 const dailyOffer = {
   dailyOfferLabel: "DAILY OFFER",
-  mainOffer: "10% OFF ONLINE PICKUP ORDERS",
+  mainOffer: "FRESH AUTHENTIC FLAVORS AVAILABLE FOR PICKUP",
   openingHours: {
     title: "OPENING HOURS DINNER:",
     time: "MON TO FRI 11:00 AM - 2:00 PM, 5:00 PM - 9:30 PM",

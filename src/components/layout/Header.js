@@ -66,7 +66,7 @@ const Header = () => {
     { name: "Home", href: APP_URL.home },
     { name: "Menu", href: APP_URL.menu },
     { name: "Reserve a Table", href: APP_URL.book_table },
-    { name: "Order Online (10% Off)", href: APP_URL.order },
+    { name: "Order Online", href: APP_URL.order },
     { name: "Events", href: APP_URL.event },
     { name: "Contact", href: APP_URL.contact },
     { name: "Gallery", href: APP_URL.gallery },
@@ -182,7 +182,7 @@ const Header = () => {
               href={item.href}
               onClick={(e) => handleNavigation(e, item.href)}
               className={`block px-6 py-4 text-lg font-medium border-b border-gray-800/50 hover:bg-gray-900 transition-colors duration-300 ${
-                item.name === "Order Online (10% Off)"
+                item.name === "Order Online"
                   ? "text-primary-400"
                   : "text-white hover:text-primary-300"
               }`}
