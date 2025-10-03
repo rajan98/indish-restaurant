@@ -786,7 +786,7 @@ const FOOD_MENU = {
   },
   oceans_bounty: {
     title: "Ocean's Bounty",
-    subtitle: "Vegetables Reimagined in Every Curry",
+    subtitle: "From the Sea to Your Plate",
     items: [
       {
         name: "Goan Fish Curry (GF)",
