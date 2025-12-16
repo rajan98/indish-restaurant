@@ -162,4 +162,4 @@ npm start
 
 ## 📝 License
 
-This project is created for educational purposes. Please ensure you have proper rights to use any images or content in production.
+This project is created for educational purposes. Please ensure you have proper rights to use any images or content in production
