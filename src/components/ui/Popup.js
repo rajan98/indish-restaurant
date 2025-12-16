@@ -4,7 +4,7 @@ const StoreOpeningPopup = ({
   isOpen,
   onConfirm,
   onCancel,
-  title = "Store Opening Soon",
+  title = "Store is Closed",
   message,
   confirmText = "Yes, Proceed",
   cancelText = "Okay, Got it",
