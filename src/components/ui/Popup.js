@@ -7,7 +7,7 @@ const StoreOpeningPopup = ({
   title = "Store Opening Soon",
   message,
   confirmText = "Yes, Proceed",
-  cancelText = "Cancel",
+  cancelText = "Okay, Got it",
 }) => {
   if (!isOpen) return null;
 
@@ -40,7 +40,7 @@ const StoreOpeningPopup = ({
                 message
               ) : (
                 <>
-                  The store stays closed on <span className="font-semibold text-primary-600">{APP_CONSTANTS.closedDay}</span>. Are you sure you want to proceed?
+                  We are really sorry. The store is <span className="font-semibold text-primary-600">{`closed`}</span> today.
                 </>
               )}
             </p>
@@ -54,12 +54,12 @@ const StoreOpeningPopup = ({
             >
               {cancelText}
             </button>
-            <button
+            {/* <button
               onClick={onConfirm}
               className="flex-1 md:px-4 px-2 py-3 bg-primary-500 text-white rounded-xl font-medium hover:bg-primary-600 transition-colors duration-200 md:text-md text-sm"
             >
               {confirmText}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
