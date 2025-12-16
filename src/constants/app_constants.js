@@ -13,7 +13,7 @@ const APP_CONSTANTS = {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
-    opened: false, 
+    opened: true, 
     closedDay: 'Tuesday'
 }
 
