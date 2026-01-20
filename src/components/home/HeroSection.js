@@ -88,7 +88,7 @@ const HeroSection = () => {
               <div className="relative inline-block">
                 {/* 10% OFF Badge */}
                 <div
-                  className="absolute -top-3 -right-3 bg-yellow-400 text-black font-bold text-[10px] md:text-xs px-2 py-1 rounded-full shadow-lg z-10"
+                  className="absolute -top-3 -right-3 bg-yellow-400 text-black font-bold text-xs md:text-sm px-2.5 py-1 rounded-full shadow-lg z-10"
                   style={{
                     animation: 'gentle-bounce 2s ease-in-out infinite'
                   }}
