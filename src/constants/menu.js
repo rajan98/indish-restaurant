@@ -1026,4 +1026,67 @@ const FOOD_MENU = {
   }
 };
 
-export { BEVERAGES_MENU, FOOD_MENU };
+const LUNCH_MENU = {
+  lunch_specials: {
+    title: "Lunch Specials",
+    subtitle: "Wed - Sun, 11:30AM - 2:30PM",
+    items: [
+      {
+        name: "Non-Veg Thali",
+        description: "Chef's selection of dal, 2 non-veg curry, rice, naan bread, raita, mixed pickles, pappadum and a dessert",
+        price: "$18.00",
+        type: "Non-Veg"
+      },
+      {
+        name: "Veg Thali",
+        description: "Chef's selection of dal, 2 veg curry, rice, naan bread, raita, mixed pickles, pappadum and a dessert",
+        price: "$15.00",
+        type: "Veg"
+      },
+      {
+        name: "Non-Veg Wrap & Drink",
+        description: "Smokey tandoori chicken tikka wrapped in warm flatbread with salad and creamy mint sauce.",
+        price: "$11.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Veg Wrap & Drink",
+        description: "Golden potato-pattie wrapped in warm flatbread with salad and mint yoghurt sauces.",
+        price: "$10.90",
+        type: "Veg"
+      },
+      {
+        name: "Butter Chicken & Rice",
+        description: "",
+        price: "$12.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Lamb Rogan Josh & Rice",
+        description: "",
+        price: "$13.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Beef Vindaloo & Rice",
+        description: "",
+        price: "$13.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Dal Makhani & Rice",
+        description: "",
+        price: "$11.90",
+        type: "Veg"
+      },
+      {
+        name: "Chickpea Curry & Rice",
+        description: "",
+        price: "$10.90",
+        type: "Veg"
+      }
+    ]
+  }
+};
+
+export { BEVERAGES_MENU, FOOD_MENU, LUNCH_MENU };

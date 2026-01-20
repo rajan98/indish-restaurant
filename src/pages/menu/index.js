@@ -3,7 +3,7 @@ import { useState } from "react";
 import EachPageLayout from "../../components/layout/EachPageLayout";
 import FoodMenuComponent from "../../components/menu/FoodMenuComponent";
 import APP_CONSTANTS from "../../constants/app_constants";
-import { BEVERAGES_MENU, FOOD_MENU } from "../../constants/menu";
+import { BEVERAGES_MENU, FOOD_MENU, LUNCH_MENU } from "../../constants/menu";
 
 
 
@@ -48,10 +48,10 @@ const generateStructuredData = () => {
         menuAddOn: section.subtitle?.includes("Vegan")
           ? ["Vegan"]
           : section.subtitle?.includes("Vegetarian")
-          ? ["Vegetarian"]
-          : section.subtitle?.includes("GF")
-          ? ["Gluten Free"]
-          : [],
+            ? ["Vegetarian"]
+            : section.subtitle?.includes("GF")
+              ? ["Gluten Free"]
+              : [],
       });
     });
   });
@@ -65,24 +65,24 @@ const generateStructuredData = () => {
         description: `${formatSectionName(sectionKey)} from ${item.location}`,
         offers: item.glass_price
           ? [
-              {
-                "@type": "Offer",
-                name: "Glass",
-                price: item.glass_price.replace("$", ""),
-                priceCurrency: "AUD",
-              },
-              {
-                "@type": "Offer",
-                name: "Bottle",
-                price: item?.bottle_price?.replace("$", ""),
-                priceCurrency: "AUD",
-              },
-            ]
-          : {
+            {
               "@type": "Offer",
+              name: "Glass",
+              price: item.glass_price.replace("$", ""),
+              priceCurrency: "AUD",
+            },
+            {
+              "@type": "Offer",
+              name: "Bottle",
               price: item?.bottle_price?.replace("$", ""),
               priceCurrency: "AUD",
             },
+          ]
+          : {
+            "@type": "Offer",
+            price: item?.bottle_price?.replace("$", ""),
+            priceCurrency: "AUD",
+          },
       });
     });
   });
@@ -176,6 +176,10 @@ export default function MenuPage() {
     },
     {
       id: 1,
+      label: "Lunch Menu",
+    },
+    {
+      id: 2,
       label: "Beverages",
     },
   ];
@@ -296,11 +300,10 @@ export default function MenuPage() {
                     role="tab"
                     aria-selected={activeTab === tab.id}
                     aria-controls={`tabpanel-${tab.id}`}
-                    className={`px-6 py-3 border-b-2 font-semibold tracking-wider transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? "bg-primary-400 text-white border-primary-600"
-                        : "bg-gray-300 text-gray-800 hover:bg-gray-300"
-                    }`}
+                    className={`px-6 py-3 border-b-2 font-semibold tracking-wider transition-all duration-300 ${activeTab === tab.id
+                      ? "bg-primary-400 text-white border-primary-600"
+                      : "bg-gray-300 text-gray-800 hover:bg-gray-300"
+                      }`}
                   >
                     {tab.label}
                   </button>
@@ -308,8 +311,99 @@ export default function MenuPage() {
               </nav>
             </header>
 
-            {/* Beverages Section with SEO markup */}
+            {/* Lunch Menu Section */}
             {activeTab === 1 && (
+              <section
+                id="tabpanel-1"
+                role="tabpanel"
+                aria-labelledby="lunch-tab"
+                itemScope
+                itemType="https://schema.org/MenuSection"
+              >
+                <h2 className="sr-only" itemProp="name">
+                  Lunch Specials Menu
+                </h2>
+                <p className="sr-only" itemProp="description">
+                  Special lunch menu available Wednesday to Sunday, 11:30AM - 2:30PM
+                </p>
+
+                {Object.entries(LUNCH_MENU).map(
+                  ([sectionKey, section], _sectionIndex) => (
+                    <article key={sectionKey} className="mb-12">
+                      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        {/* Section Header */}
+                        <header className="bg-black text-white px-6 py-4">
+                          <h3 className="text-xl font-bold" itemProp="name">
+                            {section.title}
+                          </h3>
+                          <p className="text-gray-300 text-sm mt-1">
+                            {section.subtitle}
+                          </p>
+                        </header>
+
+                        {/* Lunch Items */}
+                        <div className="divide-y divide-gray-200">
+                          {section.items.map((item, itemIndex) => (
+                            <div
+                              key={itemIndex}
+                              className="px-6 py-6 hover:bg-gray-50 transition-colors duration-300"
+                              itemScope
+                              itemType="https://schema.org/MenuItem"
+                            >
+                              <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <h4
+                                      className="text-lg md:text-xl font-semibold text-gray-900"
+                                      itemProp="name"
+                                    >
+                                      {item.name}
+                                    </h4>
+                                    <span
+                                      className={`text-xs px-2 py-1 rounded-full font-medium ${item.type === "Veg"
+                                        ? "bg-green-100 text-green-800"
+                                        : "bg-red-100 text-red-800"
+                                        }`}
+                                    >
+                                      {item.type}
+                                    </span>
+                                  </div>
+                                  {item.description && (
+                                    <p
+                                      className="text-gray-600 text-sm md:text-base"
+                                      itemProp="description"
+                                    >
+                                      {item.description}
+                                    </p>
+                                  )}
+                                </div>
+                                <div
+                                  className="text-right flex-shrink-0"
+                                  itemProp="offers"
+                                  itemScope
+                                  itemType="https://schema.org/Offer"
+                                >
+                                  <span
+                                    className="text-lg md:text-xl font-bold text-gray-900"
+                                    itemProp="price"
+                                  >
+                                    {item.price}
+                                  </span>
+                                  <meta itemProp="priceCurrency" content="AUD" />
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  )
+                )}
+              </section>
+            )}
+
+            {/* Beverages Section with SEO markup */}
+            {activeTab === 2 && (
               <section
                 id="tabpanel-1"
                 role="tabpanel"
