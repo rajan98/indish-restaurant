@@ -1,3 +1,5 @@
+import { isStoreOpen } from '../utils/storeStatus.js';
+
 const APP_CONSTANTS = {
     company_name_title_case: "Indish",
     phone_number1: "045232 8901",
@@ -13,7 +15,7 @@ const APP_CONSTANTS = {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
-    opened: true,
+    opened: isStoreOpen(), // Automatically checks if today is Tuesday in Australian timezone
     closedDay: 'Tuesday'
 }
 
