@@ -85,10 +85,9 @@ export default function Home() {
               },
               telephone: "(04) 5232 8901",
               openingHours: [
-                "Mo-Fr 11:00-14:00",
-                "Mo-Fr 17:00-22:00",
-                "Sa-Su 09:00-14:00",
-                "Sa-Su 17:00-22:00",
+                "Mo 17:00-22:00",
+                "We-Su 11:30-14:30",
+                "We-Su 17:00-22:00",
               ],
               servesCuisine: "Indian",
               priceRange: "$$",

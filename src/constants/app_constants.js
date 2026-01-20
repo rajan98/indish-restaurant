@@ -8,7 +8,7 @@ const APP_CONSTANTS = {
 
     website_url: "indish.com.au",
     full_website_url: "https://www.indish.com.au/",
-    opening: "Monday - Sunday 5:00 pm to 10:00 pm",
+    opening: "Mon 5-10pm | Wed-Sun 11:30am-2:30pm, 5-10pm | Tue Closed",
     email: "info@Indish.com.au",
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
