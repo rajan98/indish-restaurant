@@ -12,7 +12,7 @@ const HeroSection = () => {
   const handleNavigation = (e, href) => {
     if (!APP_CONSTANTS.opened) {
       const externalLinks = [APP_URL.order, APP_URL.book_table];
-      
+
       if (externalLinks.includes(href)) {
         e.preventDefault();
         setPendingUrl(href);
@@ -85,17 +85,28 @@ const HeroSection = () => {
 
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href={APP_URL.order}
-                onClick={(e) => handleNavigation(e, APP_URL.order)}
-                className="btn-primary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 shadow-2xl"
-              >
-                {Description.hero.primaryButton}
-              </Link>
+              <div className="relative inline-block">
+                {/* 10% OFF Badge */}
+                <div
+                  className="absolute -top-3 -right-3 bg-yellow-400 text-black font-bold text-[10px] md:text-xs px-2 py-1 rounded-full shadow-lg z-10"
+                  style={{
+                    animation: 'gentle-bounce 2s ease-in-out infinite'
+                  }}
+                >
+                  10% OFF
+                </div>
+                <Link
+                  href={APP_URL.order}
+                  onClick={(e) => handleNavigation(e, APP_URL.order)}
+                  className="btn-primary text-base md:text-lg px-8 md:px-8 py-4 md:py-4 shadow-2xl inline-block"
+                >
+                  {Description.hero.primaryButton}
+                </Link>
+              </div>
               <Link
                 href={APP_URL.book_table}
                 onClick={(e) => handleNavigation(e, APP_URL.book_table)}
-                className="btn-secondary text-sm md:text-lg px-6 md:px-8 py-3 md:py-4"
+                className="btn-secondary text-base md:text-lg px-8 md:px-8 py-4 md:py-4"
               >
                 {Description.hero.secondaryButton}
               </Link>

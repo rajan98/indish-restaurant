@@ -76,15 +76,13 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-black shadow-lg" : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+          }`}
       >
         {/* Top Bar - Desktop Only */}
         <div
-          className={`border-b border-primary-200/20 ${
-            isScrolled ? "hidden" : "hidden md:block"
-          }`}
+          className={`border-b border-primary-200/20 ${isScrolled ? "hidden" : "hidden md:block"
+            }`}
         >
           <div className="container-custom">
             <div className="flex justify-between items-center py-2 text-sm">
@@ -123,13 +121,17 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavigation(e, item.href)}
-                  className={`font-medium transition-colors duration-300 ${
-                    isScrolled
-                      ? "text-white hover:text-primary-400"
-                      : "text-white hover:text-primary-300"
-                  }`}
+                  className={`font-medium transition-colors duration-300 relative ${isScrolled
+                    ? "text-white hover:text-primary-400"
+                    : "text-white hover:text-primary-300"
+                    }`}
                 >
                   {item.name}
+                  {item.name === "Order Online" && (
+                    <span className="absolute -top-3 -right-8 bg-yellow-400 text-black text-xs font-bold px-2 py-0.5 rounded-full animate-pulse">
+                      10% OFF
+                    </span>
+                  )}
                 </Link>
               ))}
             </div>
@@ -149,17 +151,15 @@ const Header = () => {
       {/* Full Screen Mobile Menu */}
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-black/50 z-[60] lg:hidden transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 bg-black/50 z-[60] lg:hidden transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
         onClick={() => setIsMenuOpen(false)}
       />
 
       {/* Slide-in Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-black text-white z-[70] lg:hidden overflow-y-auto transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-80 bg-black text-white z-[70] lg:hidden overflow-y-auto transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-800">
@@ -181,14 +181,20 @@ const Header = () => {
               key={item.name}
               href={item.href}
               onClick={(e) => handleNavigation(e, item.href)}
-              className={`block px-6 py-4 text-lg font-medium border-b border-gray-800/50 hover:bg-gray-900 transition-colors duration-300 ${
-                item.name === "Order Online"
-                  ? "text-primary-400"
-                  : "text-white hover:text-primary-300"
-              }`}
+              className={`block px-6 py-4 text-lg font-medium border-b border-gray-800/50 hover:bg-gray-900 transition-colors duration-300 ${item.name === "Order Online"
+                ? "text-primary-400"
+                : "text-white hover:text-primary-300"
+                }`}
             >
-              {item.name}
-              {item.name === "Menu" && <span className="float-right">→</span>}
+              <span className="flex items-center justify-between">
+                <span>{item.name}</span>
+                {item.name === "Order Online" && (
+                  <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full ml-2">
+                    10% OFF
+                  </span>
+                )}
+                {item.name === "Menu" && <span>→</span>}
+              </span>
             </Link>
           ))}
         </div>
