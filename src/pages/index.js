@@ -18,11 +18,11 @@ export default function Home() {
         <title>{`Home | ${APP_CONSTANTS.company_name_title_case}`}</title>
         <meta
           name="description"
-          content="Experience the evolution of Indish at Indish. Modern Indian restaurant in Hornsby offering authentic flavors with contemporary innovation. Book your table today!"
+          content="Experience the evolution of Indish at Indish. Modern Indian restaurant in Newcastle offering authentic flavors with contemporary innovation. Book your table today!"
         />
         <meta
           name="keywords"
-          content="Indian restaurant, modern Indish, Hornsby restaurant, authentic Indian food, contemporary Indian dining"
+          content="Indian restaurant, modern Indish, Newcastle restaurant, authentic Indian food, contemporary Indian dining"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
