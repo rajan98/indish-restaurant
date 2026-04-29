@@ -127,11 +127,11 @@ const Header = () => {
                     }`}
                 >
                   {item.name}
-                  {item.name === "Order Online" && (
+                  {/* {item.name === "Order Online" && (
                     <span className="absolute -top-3 -right-8 bg-yellow-400 text-black text-xs font-bold px-2 py-0.5 rounded-full animate-pulse">
                       10% OFF
                     </span>
-                  )}
+                  )} */}
                 </Link>
               ))}
             </div>
@@ -188,11 +188,11 @@ const Header = () => {
             >
               <span className="flex items-center justify-between">
                 <span>{item.name}</span>
-                {item.name === "Order Online" && (
+                {/* {item.name === "Order Online" && (
                   <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full ml-2">
                     10% OFF
                   </span>
-                )}
+                )} */}
                 {item.name === "Menu" && <span>→</span>}
               </span>
             </Link>

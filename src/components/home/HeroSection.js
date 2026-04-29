@@ -86,15 +86,15 @@ const HeroSection = () => {
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="relative inline-block">
-                {/* 10% OFF Badge */}
-                <div
+                {/* 10% OFF Badge - Disabled */}
+                {/* <div
                   className="absolute -top-3 -right-3 bg-yellow-400 text-black font-bold text-xs md:text-sm px-2.5 py-1 rounded-full shadow-lg z-10"
                   style={{
                     animation: 'gentle-bounce 2s ease-in-out infinite'
                   }}
                 >
                   10% OFF
-                </div>
+                </div> */}
                 <Link
                   href={APP_URL.order}
                   onClick={(e) => handleNavigation(e, APP_URL.order)}
