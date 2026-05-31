@@ -15,7 +15,8 @@ const APP_CONSTANTS = {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
-    opened: isStoreOpen(), // Automatically checks if today is Tuesday in Australian timezone
+    // opened: isStoreOpen(), // Automatically checks if today is Tuesday in Australian timezone
+    opened: false,
     closedDay: 'Tuesday'
 }
 
