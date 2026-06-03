@@ -16,7 +16,7 @@ const APP_CONSTANTS = {
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
     // opened: isStoreOpen(), // Automatically checks if today is Tuesday in Australian timezone
-    opened: false,
+    opened: true,
     closedDay: 'Tuesday'
 }
 
