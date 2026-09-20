@@ -17,7 +17,11 @@ const APP_CONSTANTS = {
     twitter: "https://www.x.com/",
     // opened: isStoreOpen(), // Automatically checks if today is Tuesday in Australian timezone
     opened: false,
-    closedDay: 'Tuesday'
+    closedDay: 'Tuesday',
+
+    // Renovation banner
+    is_store_renovating: true,
+    renovation_message: "We're giving Indish a fresh new look! Thank you for your patience. Something beautiful is coming!"
 }
 
 export default APP_CONSTANTS;
