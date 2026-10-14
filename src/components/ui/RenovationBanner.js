@@ -103,8 +103,14 @@ const RenovationBanner = () => {
 
   useEffect(() => {
     setMounted(true);
-    document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
+    if (APP_CONSTANTS.is_store_renovating) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, []);
 
   if (!APP_CONSTANTS.is_store_renovating) return null;

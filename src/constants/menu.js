@@ -1,3 +1,8 @@
+/**
+ * Indish Indian Restro-Bar - Menu Data
+ * Updated with latest dine-in menu items and synchronized with menu backup schema.
+ */
+
 const BEVERAGES_MENU = {
   mocktails: [
     {
@@ -360,14 +365,32 @@ const BEVERAGES_MENU = {
   beverages: [
     {
       name: "Mango Lassi",
-      location: "Traditional Indian mango yogurt drink",
+      location: "A creamy blend of ripe mangoes, smooth yogurt, and a hint of aromatic cardamom, creating a refreshing and luscious drink.",
+      glass_price: "$6.00",
+      bottle_price: null
+    },
+    {
+      name: "Bottle Water",
+      location: "Pure bottled water",
+      glass_price: "$4.00",
+      bottle_price: null
+    },
+    {
+      name: "Mineral Water",
+      location: "Pure mineral water",
+      glass_price: "$5.00",
+      bottle_price: null
+    },
+    {
+      name: "Sparkling Water",
+      location: "Premium sparkling water",
       glass_price: "$6.00",
       bottle_price: null
     },
     {
       name: "Soft Drinks",
       location: "Coke, Coke Zero, Sprite",
-      glass_price: "$5",
+      glass_price: "$5.00",
       bottle_price: null
     },
     {
@@ -377,35 +400,23 @@ const BEVERAGES_MENU = {
       bottle_price: null
     },
     {
-      name: "Fruit Juice",
-      location: "Orange, Pineapple, Cranberry",
-      glass_price: "$5",
-      bottle_price: null
-    },
-    {
       name: "Ginger Beer",
       location: "Spicy ginger beverage",
-      glass_price: "$5",
+      glass_price: "$5.00",
       bottle_price: null
     },
     {
-      name: "Sparkling Water",
-      location: "Premium sparkling water",
-      glass_price: "$8",
-      bottle_price: null
-    },
-    {
-      name: "Mineral Water",
-      location: "Pure mineral water",
-      glass_price: "$5",
+      name: "Fruit Juice",
+      location: "Orange, Pineapple, Cranberry",
+      glass_price: "$5.00",
       bottle_price: null
     }
   ],
   tea: [
     {
       name: "Kadak Chai",
-      location: "Strong spiced Indian tea",
-      glass_price: "$5",
+      location: "A robust blend of black tea, infused with aromatic spices like cardamom, ginger and cloves and finished with a creamy touch of milk for rich, smooth texture.",
+      glass_price: "$5.00",
       bottle_price: null
     }
   ]
@@ -414,7 +425,7 @@ const BEVERAGES_MENU = {
 const FOOD_MENU = {
   veg_entrees: {
     title: "Veg Entrees",
-    subtitle: "Veggie Delights with a Masala Twist",
+    subtitle: "",
     items: [
       {
         name: "Samosa",
@@ -423,22 +434,22 @@ const FOOD_MENU = {
         type: "Veg"
       },
       {
-        name: "Crunchy Crispy Corn (Vegan)",
-        description: "Crispy golden corn tossed with spices, herbs, and a hint of lemon.",
-        price: "$15.90",
-        type: "Vegan"
+        name: "Mix Pakora",
+        description: "Crispy and golden, this pakora features sliced potatoes coated in seasoned chickpea flour batter, infused with a blend of aromatic spices. Served with mint and tamarind chutney.",
+        price: "$13.90",
+        type: "Veg"
       },
       {
-        name: "Veg Manchurian (Dry) (Vegan)",
+        name: "Cheese Fire Balls",
+        description: "Crunchy on the outside, these cheese fire balls feature a spicy kick and a gooey, melted cheese center, delivering a perfect balance of heat and creaminess in every bite.",
+        price: "$16.90",
+        type: "Veg"
+      },
+      {
+        name: "Veg Manchurian (Dry)",
         description: "Crispy vegetable balls tossed in a tangy Indo-Chinese sauce.",
         price: "$16.90",
-        type: "Vegan"
-      },
-      {
-        name: "Gobi Manchurian (Dry/Gravy) (Vegan)",
-        description: "Deep-fried cauliflower cooked with diced capsicum and onion with soy sauce.",
-        price: "$16.90",
-        type: "Vegan"
+        type: "Veg"
       },
       {
         name: "Tandoori Soya Chaap",
@@ -447,19 +458,19 @@ const FOOD_MENU = {
         type: "Veg"
       },
       {
-        name: "Malai Chaap",
+        name: "Malai Soya Chaap",
         description: "Creamy and tender soya chaap marinated in rich malai and mild spices, grilled to perfection, served with mint chutney.",
         price: "$17.90",
         type: "Veg"
       },
       {
-        name: "Chilli Paneer (Dry/Gravy)",
-        description: "Battered, deep-fried cottage cheese cooked with soy sauce, sweet chili sauce, and diced capsicum.",
+        name: "Chilli Paneer",
+        description: "Battered and deep-fried cottage cheese cooked with soy sauce, sweet chilli sauce, and diced capsicum. Dry or gravy.",
         price: "$17.90",
         type: "Veg"
       },
       {
-        name: "Paneer Pakoda",
+        name: "Paneer Pakora",
         description: "Soft paneer slices dipped in spiced gram flour batter and deep-fried until crispy.",
         price: "$18.90",
         type: "Veg"
@@ -469,75 +480,111 @@ const FOOD_MENU = {
         description: "Overnight marinated cottage cheese pieces with spices, cooked in a clay oven. Served with mint chutney.",
         price: "$18.90",
         type: "Veg"
+      },
+      {
+        name: "Mushroom Tikka",
+        description: "Juicy mushrooms marinated in a flavorful tikka blend and expertly grilled to perfection, offering a smoky and spicy taste.",
+        price: "$16.90",
+        type: "Veg"
+      },
+      {
+        name: "Chilli Momos",
+        description: "Chilli momos feature a spicy filling encased in a soft, doughy exterior, served with a tangy and spicy dipping sauce.",
+        price: "$17.90",
+        type: "Veg"
+      },
+      {
+        name: "Chow Mein Noodles",
+        description: "Stir-fried noodles tossed with crisp, fresh garden vegetables in a savory soy and garlic sauce.",
+        price: "$15.90",
+        type: "Veg"
       }
     ]
   },
-  chaat_temptations: {
-    title: "Chaat Temptations",
-    subtitle: "Crispy, Tangy, and Totally Addictive",
+  chaat_and_snack_temptations: {
+    title: "Chaat and Snack Temptations",
+    subtitle: "",
     items: [
       {
-        name: "Golgappa Shots (Vegan)",
-        description: "Pastry shells served with a potato and chickpea mixture topped with tamarind sauce & spicy jaljeera water.",
-        price: "$12.90",
-        type: "Vegan"
+        name: "Golgappa Shots",
+        description: "Pastry shells served with a potato and chickpea mixture topped with tamarind sauce and spicy jaljeera water.",
+        price: "$10.90",
+        type: "Veg"
       },
       {
         name: "Palak Patta Chaat",
         description: "Crispy spinach leaves topped with tangy chutneys, creamy yogurt, and a sprinkle of spices.",
-        price: "$14.90",
+        price: "$13.90",
         type: "Veg"
       },
       {
         name: "Samosa Chaat",
-        description: "Crispy samosa topped with spicy chickpeas, tangy chutneys, yogurt, and fresh herbs for a flavorful chaat.",
-        price: "$15.90",
+        description: "A tumble samosa with salsa and chutney.",
+        price: "$12.90",
         type: "Veg"
       },
       {
-        name: "Khasta Aloo Tikki",
+        name: "Aloo Tikki Chaat",
         description: "Potatoes, onions, and spices combined into a croquette and deep-fried. Served with tamarind sauce.",
-        price: "$15.90",
+        price: "$14.90",
+        type: "Veg"
+      },
+      {
+        name: "Dahi Bhalla Chaat",
+        description: "Soft fried dumplings topped with creamy yogurt and drizzled with tangy tamarind chutney, creating a delightful blend of flavours and textures.",
+        price: "$14.90",
+        type: "Veg"
+      },
+      {
+        name: "Amritsari Kulcha",
+        description: "Fluffy bread filled with a savoury potato stuffing, seasoned with a blend of aromatic spices, and baked to a perfect golden, crispy texture. Served with Chole (spiced chickpea curry), tangy onion and mint-tamarind chutney.",
+        price: "$17.90",
+        type: "Veg"
+      },
+      {
+        name: "Punjabi Chole Bhature",
+        description: "A hearty serving of spiced chickpeas simmered in a rich, aromatic tomato-based gravy, accompanied by fluffy fried bread that is golden and crisp. Served with a side of tangy pickle for an added burst of flavor.",
+        price: "$16.90",
         type: "Veg"
       }
     ]
   },
   non_veg_entrees: {
     title: "Non-Veg Entrees",
-    subtitle: "Opening Act: The Meaty Affair",
+    subtitle: "",
     items: [
       {
-        name: "Chilli Chicken (Dry/Gravy)",
-        description: "Spicy tender pieces of chicken battered and cooked with soy sauce, diced onions, and capsicum.",
+        name: "Chilli Chicken",
+        description: "Spicy tender pieces of chicken battered and cooked with soy sauce, diced onions, and capsicum. Dry or gravy.",
         price: "$18.90",
         type: "Non-Veg"
       },
       {
         name: "Chicken 65",
-        description: "Spicy, deep-fried chicken bites tossed in a flavorful South Indian masala with curry leaves and chilies.",
+        description: "Spicy and deep-fried chicken bites tossed in a flavourful south Indian masala with curry leaves and chillies.",
         price: "$17.90",
         type: "Non-Veg"
       },
       {
-        name: "Murg Tikka (GF)",
+        name: "Murg Tikka",
         description: "Boneless chicken thigh fillet marinated in yogurt and spices, cooked in a tandoor oven, and served with mint chutney.",
         price: "$19.90",
         type: "Non-Veg"
       },
       {
-        name: "Afghani Chicken Tikka (GF)",
+        name: "Afghani Chicken Tikka",
         description: "Chicken marinated with black pepper, cream, cashew nut paste, lime juice, ginger, and garlic paste.",
         price: "$19.90",
         type: "Non-Veg"
       },
       {
-        name: "Tandoori Chicken (Half/Full) (GF)",
-        description: "Juicy chicken marinated in yogurt and aromatic spices, grilled to smoky perfection in a tandoor oven.",
-        price: "$16.90/$21.00",
+        name: "Tandoori Chicken",
+        description: "Juicy chicken marinated in yogurt and aromatic spices and grilled to smoky perfection in a tandoor oven.",
+        price: "$16.90 (Half) / $21.90 (Full)",
         type: "Non-Veg"
       },
       {
-        name: "Seekh Kebab (GF)",
+        name: "Seekh Kebab",
         description: "Lamb mince, herbs, and spices, cooked in a clay oven. Served with mint chutney.",
         price: "$18.90",
         type: "Non-Veg"
@@ -550,211 +597,265 @@ const FOOD_MENU = {
       },
       {
         name: "Kalimirch Prawn",
-        description: "Tiger prawns marinated in Indian spices and fried in Chettinad style.",
+        description: "Tiger prawns marinated in Indian spices and fried in chettinad style.",
         price: "$22.90",
         type: "Non-Veg"
       },
       {
-        name: "Tandoori Prawn (GF)",
-        description: "Succulent prawns marinated in tangy yogurt and spices, grilled to a smoky, charred finish.",
+        name: "Tandoori Garlic Prawns",
+        description: "Succulent prawns marinated in a rich tandoori blend with aromatic garlic, grilled to perfection for a smoky and savory finish.",
         price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Lamb Chops (GF)",
-        description: "Lamb cutlets marinated overnight with Kashmiri spices, garlic, and ginger. Skewered and grilled in the tandoor. Served with mint sauce.",
+        name: "Lamb Chop",
+        description: "Lamb cutlets marinated overnight with kashmiri spices, garlic, and ginger. Skewered and grilled in the tandoor. Served with mint sauce.",
         price: "$25.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Hariyali Kebab",
+        description: "Juicy, tender chicken marinated in a vibrant green blend of fresh herbs and spices, grilled to perfection for a flavorful and aromatic treat.",
+        price: "$18.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Chicken Lollipop",
+        description: "Juicy chicken drumettes encased in a crispy coating, seasoned with a blend of spicy herbs and spices for a burst of heat in every bite.",
+        price: "$18.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Chicken Manchurian",
+        description: "Tender chicken pieces cooked in a tangy Manchurian sauce with a medley of vibrant bell peppers. This dish offers a delightful blend of savory, sweet, and spicy flavors.",
+        price: "$19.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Tawa Chicken",
+        description: "Succulent pieces of tender chicken, expertly marinated in a robust blend of spices and cooked on a hot tawa for a distinctive charred flavour.",
+        price: "$19.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Chilli Momos",
+        description: "Chilli momos feature a spicy filling encased in a soft, doughy exterior, served with a tangy and spicy dipping sauce.",
+        price: "$19.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Chow Mein Noodles",
+        description: "Stir-fried noodles tossed with crisp, fresh garden vegetables in a savory soy and garlic sauce.",
+        price: "$17.90",
         type: "Non-Veg"
       }
     ]
   },
-  platters: {
+  platter_for_2: {
     title: "Platter for 2",
     subtitle: "",
     items: [
       {
         name: "Indish Vegetarian Platter",
-        description: "Samosa, paneer tikka, paneer pakoda.",
-        price: "$22.90",
+        description: "Samosa, paneer tikka, paneer pakora, mix pakora & Cheese fire balls.",
+        price: "$28.90",
         type: "Veg"
       },
       {
         name: "Indish Tandoori Platter",
-        description: "Afghani chicken, lamb cutlets, seekh kabab, tandoori prawns.",
-        price: "$32.90",
+        description: "Afghani chicken, lamb chops, seekh kabab, Hariyali Kebab and tandoori prawns.",
+        price: "$38.90",
         type: "Non-Veg"
       }
     ]
   },
-  vegetarian_mains: {
+  the_main_show_vegetarian: {
     title: "The Main Show (Vegetarian)",
-    subtitle: "Vegetables Reimagined in Every Curry",
+    subtitle: "",
     items: [
       {
-        name: "Dal Tadka (GF)",
+        name: "Dal Tadka",
         description: "A flavorful and protein-rich dish that combines healthy yellow lentils and mild spices.",
         price: "$17.90",
         type: "Veg"
       },
       {
-        name: "Dal Makhani (GF)",
+        name: "Dal Makhani",
         description: "Whole black lentils cooked with kidney beans, ginger, garlic, tomatoes, and fresh cream.",
         price: "$18.90",
         type: "Veg"
       },
       {
-        name: "Aloo Gobi Dry (GF)",
+        name: "Aloo Gobi Masala",
         description: "Cauliflower fried and cooked with peas and potatoes. Can be made vegan.",
         price: "$18.90",
+        type: "Vegan"
+      },
+      {
+        name: "Jeera Aloo",
+        description: "Tender potatoes infused with aromatic cumin seeds and a blend of spices, creating a flavourful and mildly spicy dish.",
+        price: "$17.90",
         type: "Veg"
       },
       {
-        name: "Chatpate Aloo Baingan (GF)",
-        description: "Eggplant and potato fried and cooked with tomato gravy, herbs, and spices.",
-        price: "$18.90",
-        type: "Veg"
-      },
-      {
-        name: "Mixed Vegetables",
+        name: "Mixed Vegetable",
         description: "A colourful medley of fresh seasonal vegetables cooked in a mildly spiced onion tomato gravy.",
         price: "$18.90",
         type: "Veg"
       },
       {
-        name: "Pindi Chole (GF)",
+        name: "Pindi Chole",
         description: "Spicy and tangy chickpeas simmered in a flavorful tomato and onion gravy.",
         price: "$18.90",
         type: "Veg"
       },
       {
         name: "Desi Saag",
-        description: "Traditional north indian dish slow cooked spinach and mustard leaves.",
+        description: "Traditional north Indian dish slow-cooked spinach and mustard leaves.",
         price: "$18.90",
         type: "Veg"
       },
       {
-        name: "Bhindi Do Pyaaza (GF)",
-        description: "Okra deep-fried and then sautéed with spices, tomatoes, ginger, garlic, and onion.",
+        name: "Bhindi Do Pyaaza",
+        description: "Okra deep-fried and then sauteed with spices, tomatoes, ginger, garlic, and onion.",
         price: "$19.90",
         type: "Veg"
       },
       {
-        name: "Khumaani Kofta",
+        name: "Malai Kofta",
         description: "Grated cottage cheese, potato, raisins, sultanas, and cashew nut dumplings simmered in a cashew nut curry sauce.",
         price: "$18.90",
         type: "Veg"
       },
       {
-        name: "Kadai Paneer (GF)",
+        name: "Kadai Paneer",
         description: "Cottage cheese pieces cooked in the clay oven, prepared with capsicum, tomato, and a master sauce.",
         price: "$19.90",
         type: "Veg"
       },
       {
         name: "Achari Paneer",
-        description: "Soft paneer cubes cooked in a tangy, spicy pickle style masala bursting with flavours.",
+        description: "Soft paneer cubes cooked in a tangy and spicy pickle style masala bursting with flavours.",
         price: "$19.90",
         type: "Veg"
       },
       {
-        name: "Palak Paneer (GF)",
+        name: "Palak Paneer",
         description: "Cottage cheese cooked in baby spinach puree with garlic, mild spices, cream, and garnished with tomato.",
         price: "$19.90",
         type: "Veg"
       },
       {
-        name: "Shahi Paneer (GF)",
+        name: "Shahi Paneer",
         description: "Preparation of cottage cheese in creamy gravy with onion, garlic, ginger, cashews, tomatoes, and spices.",
         price: "$19.90",
+        type: "Veg"
+      },
+      {
+        name: "Matar Mushroom",
+        description: "Tender mushrooms and sweet green peas are simmered in a fragrant blend of traditional spices, creating a rich and savoury dish.",
+        price: "$18.90",
+        type: "Veg"
+      },
+      {
+        name: "Veg Korma",
+        description: "A rich coconut curry envelopes a medley of fresh mixed vegetables, topped with a luxurious cashew cream for a creamy nutty finish.",
+        price: "$20.90",
         type: "Veg"
       }
     ]
   },
-  non_vegetarian_mains: {
+  the_main_show_non_vegetarian: {
     title: "The Main Show (Non-Vegetarian)",
-    subtitle: "Meat That Melts, Flavour That Rocks",
+    subtitle: "",
     items: [
       {
-        name: "Butter Chicken (GF)",
+        name: "Butter Chicken",
         description: "Does this need any description?",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Mango Chicken (GF)",
+        name: "Mango Chicken",
         description: "Tender chicken cooked in a sweet and tangy mango sauce with subtle spices.",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Kadai Chicken (GF)",
+        name: "Kadai Chicken",
         description: "Chicken cooked with diced capsicum, onions, ginger, and garlic.",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Chicken Saag (GF)",
+        name: "Chicken Saag",
         description: "Boneless chicken breast cooked in spinach gravy with Indian spices.",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Chicken Korma (GF)",
+        name: "Chicken Korma",
         description: "Chicken simmered in a rich, creamy blend of yogurt, nuts, and aromatic spices.",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Chicken Tikka Masala (GF)",
+        name: "Chicken Tikka Masala",
         description: "Marinated chicken fillets cooked in a clay oven, then prepared with capsicum, onion, tomato, and master gravy.",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Chicken Chettinad (GF)",
+        name: "Chicken Chettinad",
         description: "Chicken thigh cooked in cassia dalchini, coconut, pepper sauce, and curry leaves.",
-        price: "$20.90",
+        price: "$21.90",
         type: "Non-Veg"
       },
       {
-        name: "Chicken Vindaloo (GF)",
-        description: "Spicy Goan chicken curry marinated in vinegar, garlic, and bold red chilies.",
-        price: "$20.90",
+        name: "Chicken Vindaloo",
+        description: "Spicy Goan chicken curry marinated in vinegar, garlic, and bold red chillies.",
+        price: "$21.90",
         type: "Non-Veg"
       }
     ]
   },
   lamb_and_goat: {
-    title: "Lamb and Goat",
+    title: "Lamb & Goat",
     subtitle: "",
     items: [
       {
-        name: "Lamb Korma (GF)",
-        description: "Tender lamb pieces slow-cooked in a rich, aromatic blend of creamy cashew sauce with traditional Indian spices.",
-        price: "$22.90",
+        name: "Lamb Korma",
+        description: "Tender lamb pieces slow-cooked in a rich and aromatic blend of creamy cashew sauce with traditional Indian spices.",
+        price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Lamb Vindaloo (GF)",
-        description: "Diced lamb braised with red chilies and ginger.",
-        price: "$22.90",
+        name: "Lamb Vindaloo",
+        description: "Tender pieces of lamb simmered in a spicy, tangy sauce, blending aromatic spices and vinegar for a flavorful kick.",
+        price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Lamb Rogan Josh (GF)",
-        description: "Lamb pieces cooked in a medium-spiced curry with coriander.",
-        price: "$22.90",
+        name: "Lamb Rogan Josh",
+        description: "Tender lamb cooked in a rich, aromatic blend of spices and a flavorful tomato-based sauce, creating a hearty and savory dish.",
+        price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Goat Curry (GF)",
-        description: "Slow-cooked goat on the bone with browned onions, ginger, garlic, black cardamom, and cassia bark.",
-        price: "$22.90",
+        name: "Nihari Goat",
+        description: "Tender goat meat simmered in a rich, flavourful gravy infused with aromatic spices, creating a hearty and satisfying dish.",
+        price: "$24.90",
         type: "Non-Veg"
       },
       {
-        name: "Saag Goat (GF)",
-        description: "Tender goat meat slow-cooked in a rich, spiced spinach gravy.",
+        name: "Saag Goat",
+        description: "Tender goat meat slow-cooked in a rich and spiced spinach gravy.",
+        price: "$24.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Tawa Goat",
+        description: "Tender goat meat marinated in a spicy aromatic blend, cooked to perfection with an array of fragrant spices for a robust and flavourful dish.",
         price: "$22.90",
         type: "Non-Veg"
       }
@@ -765,80 +866,50 @@ const FOOD_MENU = {
     subtitle: "",
     items: [
       {
-        name: "Beef Korma (GF)",
-        description: "Diced beef slow-cooked in cream and cashew sauce.",
-        price: "$22.90",
+        name: "Beef Korma",
+        description: "Tender beef pieces simmered in a creamy sauce infused with aromatic spices, creating a rich and flavorful dish.",
+        price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Beef Vindaloo (GF)",
-        description: "Diced beef braised with red chilies and fresh ginger.",
-        price: "$22.90",
+        name: "Beef Vindaloo",
+        description: "Tender beef pieces simmered in a spicy and tangy sauce, infused with a blend of aromatic spices and vinegar for a robust flavor.",
+        price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Beef Masala (GF)",
-        description: "Rich and spicy beef cooked slow with bold masala spices for a royal, flavorful experience.",
-        price: "$22.90",
+        name: "Beef Masala",
+        description: "Rich and spicy beef cooked slow with bold masala spices for a royal and flavourful experience.",
+        price: "$23.90",
         type: "Non-Veg"
       }
     ]
   },
   oceans_bounty: {
     title: "Ocean's Bounty",
-    subtitle: "From the Sea to Your Plate",
+    subtitle: "",
     items: [
       {
-        name: "Goan Fish Curry (GF)",
-        description: "Tangy and spicy fish cooked in a coconut-based curry with authentic Goan spices and a hint of tamarind.",
+        name: "Malabar Fish Curry",
+        description: "Succulent pieces of fish cooked in a rich blend of malabar spices and creamy coconut milk, delivering a harmonious balance of heat and creaminess.",
         price: "$23.90",
         type: "Non-Veg"
       },
       {
-        name: "Prawn Curry Masala (GF)",
-        description: "King prawns cooked in tomato and onion gravy with diced capsicum, onions and garlic.",
+        name: "Prawn Curry Masala",
+        description: "King prawns cooked in tomato and onion gravy with diced capsicum, onions, and garlic.",
         price: "$23.90",
         type: "Non-Veg"
-      }
-    ]
-  },
-  rice: {
-    title: "Rice",
-    subtitle: "Fluffy, Aromatic, and Full of Flavours",
-    items: [
-      {
-        name: "Steamed Rice",
-        description: "Simply steamed basmati rice.",
-        price: "$5.00",
-        type: "Veg"
-      },
-      {
-        name: "Saffron Rice",
-        description: "Aromatic basmati rice delicately infused with the luxurious flavor of saffron, creating a rich and fragrant side dish.",
-        price: "$5.50",
-        type: "Veg"
-      },
-      {
-        name: "Jeera Rice",
-        description: "Indian basmati rice infused with cumin seeds and butter.",
-        price: "$6.50",
-        type: "Veg"
-      },
-      {
-        name: "Peas Pulao",
-        description: "Basmati rice infused with saffron and baby peas.",
-        price: "$6.50",
-        type: "Veg"
       }
     ]
   },
   biryani: {
     title: "Biryani",
-    subtitle: "Biryani So Good, You'll Keep Coming Back",
+    subtitle: "",
     items: [
       {
         name: "Veg Biryani",
-        description: "Fragrant basmati rice cooked with mixed vegetables and aromatic spices for a flavorful, wholesome meal.",
+        description: "Fragrant basmati rice cooked with mixed vegetables and aromatic spices for a flavorful and wholesome meal.",
         price: "$18.90",
         type: "Veg"
       },
@@ -868,9 +939,81 @@ const FOOD_MENU = {
       }
     ]
   },
-  atta: {
-    title: "Atta (Flatbread)",
-    subtitle: "Let the Naan Steal the Show",
+  southern_elegance: {
+    title: "Southern Elegance",
+    subtitle: "",
+    items: [
+      {
+        name: "Idli Sambar",
+        description: "Soft, fluffy steamed rice-and-lentil cakes served with a hot, tangy, and spiced South Indian vegetable lentil soup (sambar), often accompanied by fresh coconut chutney.",
+        price: "$12.90",
+        type: "Veg"
+      },
+      {
+        name: "Plain Dosa",
+        description: "A thin, golden-crisp South Indian crepe made from fermented rice and lentil batter. Served with coconut chutney and hot sambar.",
+        price: "$12.90",
+        type: "Veg"
+      },
+      {
+        name: "Masala Dosa",
+        description: "Masala dosa is a thin, crispy, fermented rice-and-lentil crepe stuffed with a spiced potato and onion filling, served with coconut chutney and tangy lentil sambar.",
+        price: "$14.90",
+        type: "Veg"
+      },
+      {
+        name: "Paneer Dosa",
+        description: "South Indian rice-and-lentil crepe filled with a savoury, spiced scramble of fresh Indian cottage cheese (paneer), onions, tomatoes, and aromatic herbs. Served with coconut chutney and lentil sambar.",
+        price: "$16.90",
+        type: "Veg"
+      },
+      {
+        name: "Meat Dosa",
+        description: "Our signature crispy South Indian crepe stuffed with a hearty, spiced meat filling of your choice. Served with sambar and chutneys.",
+        price: "$18.90 (Chicken) / $19.90 (Lamb)",
+        type: "Non-Veg"
+      },
+      {
+        name: "Uttapam",
+        description: "A thick, savoury griddle cake made from fermented rice and urad dal batter, topped with garden-fresh vegetables. Served with sambar and house chutney.",
+        price: "$14.90",
+        type: "Veg"
+      }
+    ]
+  },
+  rice: {
+    title: "Rice",
+    subtitle: "",
+    items: [
+      {
+        name: "Steamed Rice",
+        description: "Simply steamed basmati rice.",
+        price: "$5.00",
+        type: "Veg"
+      },
+      {
+        name: "Saffron Rice",
+        description: "Aromatic basmati rice delicately infused with the luxurious flavor of saffron, creating a rich and fragrant side dish.",
+        price: "$5.50",
+        type: "Veg"
+      },
+      {
+        name: "Jeera Rice",
+        description: "Indian basmati rice infused with cumin seeds and butter.",
+        price: "$6.50",
+        type: "Veg"
+      },
+      {
+        name: "Peas Pulao",
+        description: "Basmati rice infused with saffron and baby peas.",
+        price: "$6.50",
+        type: "Veg"
+      }
+    ]
+  },
+  naan_bread: {
+    title: "Naan Bread",
+    subtitle: "",
     items: [
       {
         name: "Plain Naan",
@@ -899,7 +1042,7 @@ const FOOD_MENU = {
       {
         name: "Cheese and Garlic Naan",
         description: "Naan stuffed with cheese and chopped garlic.",
-        price: "$5.50",
+        price: "$6.50",
         type: "Veg"
       },
       {
@@ -909,63 +1052,33 @@ const FOOD_MENU = {
         type: "Veg"
       },
       {
-        name: "Rumali Roti",
-        description: "Soft ultra thin flat bread cooked in an inverted tawa.",
-        price: "$6.50",
-        type: "Veg"
-      },
-      {
         name: "Bread Basket",
         description: "Tandoori roti, garlic naan, and butter naan (1 each).",
         price: "$12.90",
         type: "Veg"
-      }
-    ]
-  },
-  kids_menu: {
-    title: "Kids Menu (Under 10 Years)",
-    subtitle: "",
-    items: [
+      },
       {
-        name: "Chicken Nuggets with Chips",
-        description: "",
-        price: "$12.00",
+        name: "Garlic Parsley Naan",
+        description: "Soft, fluffy naan bread brushed with a fragrant blend of minced garlic and finely chopped parsley, baked to perfection.",
+        price: "$6.50",
+        type: "Veg"
+      },
+      {
+        name: "Chicken Chilli Cheese Naan",
+        description: "Tender chicken, spiced with vibrant chili, and gooey melted cheese, all stuffed inside a warm, fluffy naan bread.",
+        price: "$7.50",
         type: "Non-Veg"
       },
       {
-        name: "Butter Chicken with Rice",
-        description: "",
-        price: "$14.90",
-        type: "Non-Veg"
-      }
-    ]
-  },
-  dessert: {
-    title: "Dessert",
-    subtitle: "End Your Meal on a Sweet Note",
-    items: [
-      {
-        name: "Gulab Jamun (2 pcs)",
-        description: "Two pieces. Sweet dumplings made from reduced milk and soaked in rose water. Served with ice cream.",
-        price: "$8.50",
+        name: "Peshawari Naan",
+        description: "Traditional Peshawari naan stuffed with a sweet blend of grated coconut and finely chopped nuts, baked to perfection in a tandoor.",
+        price: "$7.50",
         type: "Veg"
       },
       {
-        name: "Gajjar Da Halwa",
-        description: "A sweet Indian dessert made from carrots and dry fruit.",
-        price: "$8.50",
-        type: "Veg"
-      },
-      {
-        name: "Kesar Rasmalai (2 pcs)",
-        description: "Soft and spongy paneer discs soaked in saffron-infused sweetened milk, garnished with nuts.",
-        price: "$8.90",
-        type: "Veg"
-      },
-      {
-        name: "Special Rabdi Jalebi (4 pcs with Rabdi)",
-        description: "Crispy, golden jalebis soaked in sugar syrup, served with rich, creamy rabdi infused with cardamom.",
-        price: "$10.50",
+        name: "Rosemary & Sea Salt Naan",
+        description: "Soft and fluffy naan bread, infused with aromatic rosemary and sprinkled with a touch of sea salt for a perfect balance of flavors.",
+        price: "$6.50",
         type: "Veg"
       }
     ]
@@ -981,8 +1094,8 @@ const FOOD_MENU = {
         type: "Veg"
       },
       {
-        name: "Mixed Pickles",
-        description: "Mango / lime/chili / mango chutney.",
+        name: "Mixed Pickle",
+        description: "Mango, lime, chilli, mango, and chutney.",
         price: "$3.00",
         type: "Veg"
       },
@@ -994,31 +1107,127 @@ const FOOD_MENU = {
       },
       {
         name: "Old-Fashioned Kachumbar",
-        description: "Onion, tomato, cucumber mix.",
+        description: "Onion, tomato, and cucumber mix.",
         price: "$6.90",
         type: "Veg"
       },
       {
         name: "Sirka Masala Pyaaz",
-        description: "Pickled spiced onion, green chilies.",
+        description: "Pickled spiced onion and green chillies.",
         price: "$6.90",
+        type: "Veg"
+      },
+      {
+        name: "Cucumber Raita",
+        description: "Freshly grated cucumber mixed with creamy yogurt and finely chopped mint, creating a refreshing and cooling side dish perfect for any meal.",
+        price: "$6.00",
+        type: "Veg"
+      },
+      {
+        name: "Jeera Raita",
+        description: "Creamy yogurt mixed with roasted cumin seeds, creating a refreshing and cooling side dish perfect for any spicy meal.",
+        price: "$5.50",
+        type: "Veg"
+      },
+      {
+        name: "Plain Yogurt",
+        description: "A creamy and smooth yogurt with a tangy flavor, perfect for a refreshing snack.",
+        price: "$5.00",
+        type: "Veg"
+      },
+      {
+        name: "Potato Chips",
+        description: "Thinly sliced potatoes, fried to a perfect crisp and lightly seasoned with just the right amount of salt for a satisfying crunch.",
+        price: "$6.90",
+        type: "Veg"
+      }
+    ]
+  },
+  kids_menu: {
+    title: "Kids Menu (Under 10 Years)",
+    subtitle: "Under 10 Years",
+    items: [
+      {
+        name: "Chicken Nuggets with Chips",
+        description: "Juicy tender chicken pieces coated in a golden, crispy breading, served alongside perfectly seasoned, crispy chips.",
+        price: "$12.00",
+        type: "Non-Veg"
+      },
+      {
+        name: "Butter Chicken & Rice (Kids)",
+        description: "Tender pieces of chicken simmered in a rich, creamy tomato sauce, served over a bed of fragrant jasmine rice. Perfectly balanced flavors make this a kid-friendly favorite.",
+        price: "$12.90",
+        type: "Non-Veg"
+      },
+      {
+        name: "Fish & Chips",
+        description: "Golden, crispy batter envelops tender, flaky fish, complemented by a side of tangy tartar sauce for dipping.",
+        price: "$13.00",
+        type: "Non-Veg"
+      },
+      {
+        name: "Kids Chow Mein Noodles",
+        description: "Tender noodles stir-fried with a colorful mix of fresh vegetables, all tossed in a savory soy sauce.",
+        price: "$10.90 (Veg) / $11.90 (Non Veg)",
+        type: "Veg"
+      }
+    ]
+  },
+  dessert: {
+    title: "Dessert",
+    subtitle: "",
+    items: [
+      {
+        name: "Gulab Jamun",
+        description: "Two pieces. Sweet dumplings made from reduced milk and soaked in rose water. Served with ice cream.",
+        price: "$8.50",
+        type: "Veg"
+      },
+      {
+        name: "Gajjar Da Halwa",
+        description: "A sweet Indian dessert made from carrots and dry fruit.",
+        price: "$8.50",
+        type: "Veg"
+      },
+      {
+        name: "Kesar Rasmalai",
+        description: "2 pieces. Soft and spongy paneer discs soaked in saffron-infused sweetened milk, garnished with nuts.",
+        price: "$8.90",
+        type: "Veg"
+      },
+      {
+        name: "Faluda Ice Cream",
+        description: "A delightful blend of rose syrup, tender vermicelli, and crunchy sabja seeds, topped with creamy ice cream, creating a refreshing treat.",
+        price: "$11.90",
+        type: "Veg"
+      },
+      {
+        name: "Mango Ice Cream",
+        description: "Rich, creamy ice cream infused with the sweet, vibrant flavor of ripe mangoes, creating a refreshing treat for any time of day.",
+        price: "$8.90",
+        type: "Veg"
+      },
+      {
+        name: "Pista Ice Cream",
+        description: "Creamy pistachio ice cream with a rich flavor, made with finely ground pistachios for a smooth and velvety texture.",
+        price: "$8.90",
         type: "Veg"
       }
     ]
   },
   feast_menu: {
     title: "Feast Menu",
-    subtitle: "",
+    subtitle: "Minimum 4 people",
     items: [
       {
         name: "Indish Feast",
-        description: "Recommended for 4 people. A delightful spread to indulge in the best of Indian flavors: Starters: Samosa, chicken tikka, seekh kabab. Mains: 1 meat dish, 1 vegetarian selection, 1 daal. Accompaniments: Assorted dips, papadums, choice of bread, and steamed rice. Dessert: A selection of desserts to satisfy your sweet tooth.",
+        description: "Price per person, minimum 4 people. Starters: samosa, chicken tikka, seekh kabab. Mains: 1 meat dish, 1 vegetarian selection, 1 daal. Accompaniments: assorted dips, papadums, choice of bread and steamed rice. Dessert: a selection of desserts.",
         price: "$44.90 per person",
         type: "Non-Veg"
       },
       {
         name: "Royal Indish Feast",
-        description: "Recommended for 4 people. For a lavish, royal experience, this feast offers a variety of indulgent dishes: Starters: Samosa, paneer pakoda, seekh kebab, tandoori prawns. Mains: 1 meat dish, 1 seafood dish, 1 vegetarian dish, 1 daal. Accompaniments: Assorted dips, papadums, choice of bread, and saffron rice. Dessert: A selection of indulgent desserts to end on a sweet note.",
+        description: "Price per person, minimum 4 people. Starters: samosa, paneer pakora, chicken tikka, seekh kabab, tandoori prawn. Mains: 1 meat dish, 1 seafood dish, 1 vegetarian selection, 1 daal. Accompaniments: assorted dips, papadums, choice of bread and steamed rice. Dessert: a selection of desserts.",
         price: "$49.90 per person",
         type: "Non-Veg"
       }
@@ -1089,4 +1298,27 @@ const LUNCH_MENU = {
   }
 };
 
-export { BEVERAGES_MENU, FOOD_MENU, LUNCH_MENU };
+const DESSERT_MENU = {
+  dessert: FOOD_MENU.dessert
+};
+
+const FEAST_MENU = {
+  indish_feast: {
+    title: "Indish Feast",
+    subtitle: "Minimum 4 people",
+    items: [FOOD_MENU.feast_menu.items[0]]
+  },
+  royal_indish_feast: {
+    title: "Royal Indish Feast",
+    subtitle: "Minimum 4 people",
+    items: [FOOD_MENU.feast_menu.items[1]]
+  }
+};
+
+export {
+  BEVERAGES_MENU,
+  FOOD_MENU,
+  LUNCH_MENU,
+  DESSERT_MENU,
+  FEAST_MENU
+};
