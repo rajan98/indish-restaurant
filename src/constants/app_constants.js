@@ -10,14 +10,13 @@ const APP_CONSTANTS = {
 
     website_url: "indish.com.au",
     full_website_url: "https://www.indish.com.au/",
-    opening: "Mon 5-10pm | Wed-Sun 11:30am-2:30pm, 5-10pm | Tue Closed",
+    opening: "Tue-Sun 5-10pm | Mon Closed",
     email: "ask@indish.com.au",
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
     twitter: "https://www.x.com/",
-    // opened: isStoreOpen(), // Automatically checks if today is Tuesday in Australian timezone
-    opened: true,
-    closedDay: 'Tuesday',
+    opened: isStoreOpen(), // Automatically checks if today is Monday in Australian timezone
+    closedDay: 'Monday',
 
     // Renovation banner
     is_store_renovating: false,

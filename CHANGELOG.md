@@ -20,6 +20,11 @@ All notable changes to this project are documented in this file.
   - Updated primary phone number to `(02) 4031 5440`.
   - Removed outdated secondary phone number.
   - Updated primary contact email to `ask@indish.com.au`.
+- **Restaurant Trading Hours & Automatic Status Detection:**
+  - Updated operating hours across the entire platform: **Tuesday – Sunday: 17:00 – 22:00 (5:00 PM – 10:00 PM)** | **Monday: CLOSED**.
+  - Updated `src/utils/storeStatus.js` to automatically detect Monday closures in Sydney / Australian Eastern Time.
+  - Updated `APP_CONSTANTS.opening` to `"Tue-Sun 5-10pm | Mon Closed"` and `closedDay` to `'Monday'`.
+  - Updated Homepage Daily Offer banner (`src/constants/descriptions/home/dailyOffer.js`) and schema.org structured data (`src/pages/index.js`) to reflect the new schedule.
 - **Store Opening Status (`src/constants/app_constants.js`):**
   - Updated `opened` status flag to `true`.
 - **Fulfillment & Square POS Architecture Strategy:**

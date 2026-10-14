@@ -94,9 +94,10 @@ indish-restaurant/
 - **Pickup Orders:** Handled directly via Square Online (`https://indish-indian-restro-bar.square.site/`). The POS site serves as the dedicated ordering storefront.
 - **Delivery Orders:** Fulfilled through Uber Eats. The website does not provide in-house delivery; customers seeking delivery must be routed to Uber Eats.
 - **Table Bookings & Inquiries:** Consolidated into a single Square Online booking/contact page (`https://indish-indian-restro-bar.square.site/contact-us`) capturing Name, Email, Phone, Guests, Date, Time, and Special Requests. Replaces redundant separate event/contact forms.
-- **Contact Details (New Owner):**
+- **Contact Details & Trading Hours (New Owner):**
   - Phone: `(02) 4031 5440`
   - Email: `ask@indish.com.au`
+  - Trading Hours: Tuesday – Sunday: 17:00 – 22:00 (5:00 PM – 10:00 PM) | Monday: CLOSED
 
 ---
 

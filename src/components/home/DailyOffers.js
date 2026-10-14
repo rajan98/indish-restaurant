@@ -109,9 +109,11 @@ const DailyOffers = () => {
                 <p className="text-xl text-gray-300">
                   {Description.dailyOffer.openingHours.time}
                 </p>
-                <p className="text-xl text-gray-300">
-                  {Description.dailyOffer.openingHours.time2}
-                </p>
+                {Description.dailyOffer.openingHours.time2 && (
+                  <p className="text-xl text-gray-300">
+                    {Description.dailyOffer.openingHours.time2}
+                  </p>
+                )}
                 <p className="text-xl text-gray-300">
                   {Description.dailyOffer.openingHours.closed}
                 </p>

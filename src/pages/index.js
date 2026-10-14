@@ -83,11 +83,9 @@ export default function Home() {
                 latitude: -32.9283, // Cooks Hill coordinates
                 longitude: 151.7817,
               },
-              telephone: "(04) 5232 8901",
+              telephone: APP_CONSTANTS.phone_number1,
               openingHours: [
-                "Mo 17:00-22:00",
-                "We-Su 11:30-14:30",
-                "We-Su 17:00-22:00",
+                "Tu-Su 17:00-22:00",
               ],
               servesCuisine: "Indian",
               priceRange: "$$",

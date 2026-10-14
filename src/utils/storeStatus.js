@@ -1,6 +1,6 @@
 /**
  * Utility to automatically determine if the store is open based on Australian timezone
- * The store is closed on Tuesdays
+ * The store is closed on Mondays
  */
 
 /**
@@ -14,8 +14,8 @@ export const isStoreOpen = () => {
         weekday: 'long'
     });
 
-    // Store is closed on Tuesday
-    const isTuesday = australianTime === 'Tuesday';
+    // Store is closed on Monday
+    const isMonday = australianTime === 'Monday';
 
-    return !isTuesday;
+    return !isMonday;
 };
