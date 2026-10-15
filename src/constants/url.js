@@ -3,10 +3,10 @@ const APP_URL = {
   about: "/about",
   gallery: "/gallery",
   home: "/",
-  order: "https://indish-indian-restro-bar.square.site/",
-  event: "https://indish-indian-restro-bar.square.site/contact-us",
-  contact: "https://indish-indian-restro-bar.square.site/contact-us",
-  book_table: "https://indish-indian-restro-bar.square.site/contact-us"
+  order: "https://order.indish.com.au/",
+  event: "https://order.indish.com.au/table-booking",
+  contact: "https://order.indish.com.au/contact-us",
+  book_table: "https://order.indish.com.au/table-booking"
 };
 
 export default APP_URL;

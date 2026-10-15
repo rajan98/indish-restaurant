@@ -13,9 +13,11 @@ All notable changes to this project are documented in this file.
   - Exported `DESSERT_MENU` and `FEAST_MENU` aliases for backward and forward compatibility.
 
 ### Changed
-- **Square POS URLs & Routing (`src/constants/url.js`):**
-  - Updated Order Page URL to root POS domain: `https://indish-indian-restro-bar.square.site/` (as POS site functions directly as the ordering storefront).
-  - Updated Table Booking, Contact, and Events URLs to unified contact & reservation page: `https://indish-indian-restro-bar.square.site/contact-us`.
+- **Official Custom Subdomain URLs & Routing (`src/constants/url.js`):**
+  - Connected and activated official custom subdomain `order.indish.com.au` via GoDaddy DNS and Square SSL.
+  - Updated Order Page URL to: `https://order.indish.com.au/`.
+  - Updated Table Booking & Events URLs to: `https://order.indish.com.au/table-booking`.
+  - Updated Contact Us URL to: `https://order.indish.com.au/contact-us`.
 - **New Owner Contact Information (`src/constants/app_constants.js`):**
   - Updated primary phone number to `(02) 4031 5440`.
   - Removed outdated secondary phone number.

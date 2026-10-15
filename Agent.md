@@ -91,9 +91,10 @@ indish-restaurant/
 ---
 
 ## 5. Fulfillment & External Integration Strategy
-- **Pickup Orders:** Handled directly via Square Online (`https://indish-indian-restro-bar.square.site/`). The POS site serves as the dedicated ordering storefront.
+- **Pickup Orders:** Handled directly via Square Online custom subdomain (`https://order.indish.com.au/`).
 - **Delivery Orders:** Fulfilled through Uber Eats. The website does not provide in-house delivery; customers seeking delivery must be routed to Uber Eats.
-- **Table Bookings & Inquiries:** Consolidated into a single Square Online booking/contact page (`https://indish-indian-restro-bar.square.site/contact-us`) capturing Name, Email, Phone, Guests, Date, Time, and Special Requests. Replaces redundant separate event/contact forms.
+- **Table Bookings & Events:** Handled via (`https://order.indish.com.au/table-booking`) capturing Name, Email, Phone, Guests, Date, Time, and Special Requests.
+- **Contact Us:** Dedicated contact inquiries page at (`https://order.indish.com.au/contact-us`).
 - **Contact Details & Trading Hours (New Owner):**
   - Phone: `(02) 4031 5440`
   - Email: `ask@indish.com.au`
