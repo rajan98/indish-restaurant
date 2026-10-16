@@ -19,7 +19,7 @@ const APP_CONSTANTS = {
     closedDay: 'Monday',
 
     // Renovation banner
-    is_store_renovating: true,
+    is_store_renovating: false,
     renovation_message: "We're giving Indish a fresh new look! Thank you for your patience. Something beautiful is coming!"
 }
 
