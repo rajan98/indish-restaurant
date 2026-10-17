@@ -5,6 +5,7 @@ import FeaturedDishes from "../components/home/FeaturedDishes";
 import HeroSection from "../components/home/HeroSection";
 import PhotoGallery from "../components/home/PhotoGallery";
 import PlanningAnEvent from "../components/home/PlanningEvent";
+import WeekendLunchSpecials from "../components/home/WeekendLunchSpecials";
 import WhyPeopleLoveUs from "../components/home/WhyPeopleLikeUs";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
@@ -110,6 +111,8 @@ export default function Home() {
           <ParallexBackground imageUrl={"/images/Home/Parallex/1.webp"} />
           <FeaturedDishes />
           <ParallexBackground imageUrl={"/images/Home/Parallex/2.webp"} />
+          <WeekendLunchSpecials />
+          <ParallexBackground imageUrl={"/images/Home/Parallex/1.webp"} />
           <DailyOffers />
           <ParallexBackground imageUrl={"/images/Home/Parallex/3.webp"} />
           <WhyPeopleLoveUs />

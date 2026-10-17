@@ -5,12 +5,14 @@ import featuredFood from "./home/featuredFoods";
 import customerFeedbacks from "./home/feedback";
 import heroDescriptions from "./home/hero";
 import planningEvent from "./home/planningEvent";
+import weekendLunchSpecials from "./home/weekendLunchSpecials";
 import whyPeopleLikeUs from "./home/whyPeopleLikeUs";
 
 const Description = {
   hero: { ...heroDescriptions },
   about: { ...aboutDescription },
   featuredFood,
+  weekendLunchSpecials,
   dailyOffer,
   whyPeopleLikeUs,
   planningEvent,
