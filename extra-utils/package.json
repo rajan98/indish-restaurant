@@ -1,8 +1,9 @@
 {
   "name": "extra-utils",
   "version": "1.0.0",
-  "main": "covert.js",
+  "main": "convert.js",
   "scripts": {
+    "start": "node convert.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -16,6 +16,9 @@ const walkAndProcess = async (dir) => {
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
+      if (['node_modules', '.git', '.next'].includes(entry.name)) {
+        continue;
+      }
       await walkAndProcess(fullPath);
     } else if (entry.isFile() && isImage(entry.name)) {
       const outputWebP = fullPath.replace(/\.(jpg|jpeg|png)$/i, '.webp');

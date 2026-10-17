@@ -22,7 +22,7 @@ const weekendLunchSpecials = {
       category: "North Indian Delicacy",
       description:
         "Crisp, flaky tandoori flatbread stuffed with spiced potatoes, served with rich chole and pickled onions.",
-      image: "/images/Home/WeekendSpecials/amritsari-kulcha.jpg",
+      image: "/images/Home/WeekendSpecials/amritsari-kulcha.webp",
     },
     {
       id: "chole-bhature",
@@ -30,7 +30,7 @@ const weekendLunchSpecials = {
       category: "Chef's Signature",
       description:
         "Fluffy, golden-fried bhature served with slow-simmered Punjabi chickpea curry and pickled onions.",
-      image: "/images/Home/WeekendSpecials/chole-bhature.jpg",
+      image: "/images/Home/WeekendSpecials/chole-bhature.webp",
     },
     {
       id: "samosa-chaat",
@@ -38,7 +38,7 @@ const weekendLunchSpecials = {
       category: "Street Food Favorite",
       description:
         "Crispy crushed samosas layered with spiced chickpeas, yogurt, tangy chutneys, and crunchy sev.",
-      image: "/images/Home/WeekendSpecials/samosa-chaat.jpg",
+      image: "/images/Home/WeekendSpecials/samosa-chaat.webp",
     },
     {
       id: "idli-sambar",
@@ -46,7 +46,7 @@ const weekendLunchSpecials = {
       category: "South Indian Classic",
       description:
         "Steamed, pillow-soft rice cakes served with aromatic vegetable sambar and fresh coconut chutney.",
-      image: "/images/Home/WeekendSpecials/idli-sambar.jpg",
+      image: "/images/Home/WeekendSpecials/idli-sambar.webp",
     },
     {
       id: "variety-of-dosas",
@@ -54,7 +54,7 @@ const weekendLunchSpecials = {
       category: "Crispy & Golden",
       description:
         "Crispy golden crêpes served with spiced potato masala, fragrant sambar, and fresh chutneys.",
-      image: "/images/Home/WeekendSpecials/variety-of-dosas.jpg",
+      image: "/images/Home/WeekendSpecials/variety-of-dosas.webp",
     },
     {
       id: "uttapam",
@@ -62,7 +62,7 @@ const weekendLunchSpecials = {
       category: "Savory & Wholesome",
       description:
         "Thick, savory pancake topped with sweet onions, tomatoes, and chilies, served with sambar.",
-      image: "/images/Home/WeekendSpecials/uttapam.jpg",
+      image: "/images/Home/WeekendSpecials/uttapam.webp",
     },
   ],
 };
