@@ -2,7 +2,19 @@
 
 All notable changes to this project are documented in this file.
 
-## [Unreleased / Latest] - 2026-10-14
+## [Unreleased / Latest] - 2026-10-17
+
+### Changed
+- **Operating Hours & Weekend Lunch Timing:**
+  - Expanded platform operating hours to include weekend lunch specials: **Saturday & Sunday: 11:00 AM – 2:30 PM (11-2.30pm)** alongside dinner hours **Tuesday – Sunday: 5:00 PM – 10:00 PM**, with **Monday: CLOSED**.
+  - Updated `APP_CONSTANTS.opening` to `"Tue-Sun 5-10pm | Sat-Sun Lunch 11-2.30pm | Mon Closed"` and added structured fields (`dinner_hours`, `lunch_hours`, `closed_hours`).
+  - Updated `Header.js` top bar styling to ensure responsive, wrap-free rendering across mobile, tablet, and desktop viewports.
+  - Formatted `Footer.js` opening hours cleanly into distinct dinner, lunch, and closed entries.
+  - Updated `dailyOffer.js` opening hours with explicit dinner and weekend lunch slots.
+  - Updated `src/constants/menu.js` lunch specials subtitle to `"Sat & Sun, 11:00AM - 2:30PM"`.
+  - Updated schema.org structured data on Homepage (`src/pages/index.js`) to reflect both dinner (`Tu-Su 17:00-22:00`) and weekend lunch (`Sa-Su 11:00-14:30`).
+
+## [2026-10-14]
 
 ### Fixed
 - **Menu Data Schema & SSR 500 Resolution (`src/constants/menu.js`):**

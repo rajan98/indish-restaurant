@@ -98,7 +98,7 @@ indish-restaurant/
 - **Contact Details & Trading Hours (New Owner):**
   - Phone: `(02) 4031 5440`
   - Email: `ask@indish.com.au`
-  - Trading Hours: Tuesday – Sunday: 17:00 – 22:00 (5:00 PM – 10:00 PM) | Monday: CLOSED
+  - Trading Hours: Tuesday – Sunday: 17:00 – 22:00 (5:00 PM – 10:00 PM) | Saturday & Sunday Lunch: 11:00 – 14:30 (11:00 AM – 2:30 PM) | Monday: CLOSED
 
 ---
 

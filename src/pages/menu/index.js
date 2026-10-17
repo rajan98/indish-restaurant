@@ -324,7 +324,7 @@ export default function MenuPage() {
                   Lunch Specials Menu
                 </h2>
                 <p className="sr-only" itemProp="description">
-                  Special lunch menu available Wednesday to Sunday, 11:30AM - 2:30PM
+                  Special lunch menu available Saturday and Sunday, 11:00 AM – 2:30 PM
                 </p>
 
                 {Object.entries(LUNCH_MENU).map(

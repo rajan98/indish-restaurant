@@ -87,6 +87,7 @@ export default function Home() {
               telephone: APP_CONSTANTS.phone_number1,
               openingHours: [
                 "Tu-Su 17:00-22:00",
+                "Sa-Su 11:00-14:30",
               ],
               servesCuisine: "Indian",
               priceRange: "$$",

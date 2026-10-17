@@ -10,7 +10,10 @@ const APP_CONSTANTS = {
 
     website_url: "indish.com.au",
     full_website_url: "https://www.indish.com.au/",
-    opening: "Tue-Sun 5-10pm | Mon Closed",
+    opening: "Tue-Sun 5-10pm | Sat-Sun Lunch 11-2.30pm | Mon Closed",
+    dinner_hours: "Tue – Sun 5:00 PM – 10:00 PM",
+    lunch_hours: "Sat & Sun 11:00 AM – 2:30 PM",
+    closed_hours: "Monday: Closed",
     email: "ask@indish.com.au",
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
@@ -19,7 +22,7 @@ const APP_CONSTANTS = {
     closedDay: 'Monday',
 
     // Renovation banner
-    is_store_renovating: true,
+    is_store_renovating: false,
     renovation_message: "We're giving Indish a fresh new look! Thank you for your patience. Something beautiful is coming!"
 }
 

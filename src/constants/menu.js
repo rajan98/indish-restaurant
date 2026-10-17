@@ -1238,7 +1238,7 @@ const FOOD_MENU = {
 const LUNCH_MENU = {
   lunch_specials: {
     title: "Lunch Specials",
-    subtitle: "Wed - Sun, 11:30AM - 2:30PM",
+    subtitle: "Sat & Sun, 11:00AM - 2:30PM",
     items: [
       {
         name: "Non-Veg Thali",
