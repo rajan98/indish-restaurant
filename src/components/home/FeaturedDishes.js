@@ -174,7 +174,7 @@ const FeaturedDishes = () => {
                     key={item.id}
                     className="flex-none w-full sm:w-1/2 lg:w-1/4 px-3"
                   >
-                    <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-primary-500/30 transition-all duration-300 group h-full">
+                    <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-primary-500/30 transition-all duration-300 group h-full flex flex-col">
                       {/* Image */}
                       <div className="relative overflow-hidden">
                         <img
@@ -189,33 +189,37 @@ const FeaturedDishes = () => {
                       </div>
 
                       {/* Content */}
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary-50 transition-colors duration-300">
-                          {item.name}
-                        </h3>
-                        <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
-                          {item.description}
-                        </p>
-
-                        {/* Pricing */}
-                        <div className="flex items-center gap-3 mb-4">
-                          <span className="text-gray-500 line-through text-sm">
-                            {item.originalPrice}
-                          </span>
-                          <span className="text-primary-50 font-bold text-xl">
-                            {item.price}
-                          </span>
+                      <div className="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                          <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary-50 transition-colors duration-300">
+                            {item.name}
+                          </h3>
+                          <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
+                            {item.description}
+                          </p>
                         </div>
 
-                        {/* Order Button */}
-                        <Link
-                          href={APP_URL.order}
-                          onClick={(e) => handleNavigation(e, APP_URL.order)}
-                          className="w-full bg-primary-500 hover:bg-primary-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                        >
-                          Order Now
-                          <ChevronRight size={16} />
-                        </Link>
+                        <div className="mt-auto">
+                          {/* Pricing */}
+                          <div className="flex items-center gap-3 mb-4">
+                            <span className="text-gray-500 line-through text-sm">
+                              {item.originalPrice}
+                            </span>
+                            <span className="text-primary-50 font-bold text-xl">
+                              {item.price}
+                            </span>
+                          </div>
+
+                          {/* Order Button */}
+                          <Link
+                            href={APP_URL.order}
+                            onClick={(e) => handleNavigation(e, APP_URL.order)}
+                            className="w-full bg-primary-500 hover:bg-primary-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                          >
+                            Order Now
+                            <ChevronRight size={16} />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
