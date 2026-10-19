@@ -27,16 +27,13 @@ const Header = () => {
 
   // Function to handle navigation with store opening check
   const handleNavigation = (e, href) => {
-    // Only show popup for external links (order, book_table, event, contact) when store is closed
+    // Only show popup for order link when store is closed (table bookings and enquiries remain open)
     if (!APP_CONSTANTS.opened) {
-      const externalLinks = [
+      const blockedLinks = [
         APP_URL.order,
-        APP_URL.book_table,
-        APP_URL.event,
-        APP_URL.contact,
       ];
 
-      if (externalLinks.includes(href)) {
+      if (blockedLinks.includes(href)) {
         e.preventDefault();
         setPendingUrl(href);
         setShowPopup(true);

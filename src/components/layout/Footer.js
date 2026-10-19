@@ -20,14 +20,11 @@ const Footer = () => {
 
   const handleNavigation = (e, href) => {
     if (!APP_CONSTANTS.opened) {
-      const externalLinks = [
+      const blockedLinks = [
         APP_URL.order,
-        APP_URL.book_table,
-        APP_URL.event,
-        APP_URL.contact,
       ];
 
-      if (externalLinks.includes(href)) {
+      if (blockedLinks.includes(href)) {
         e.preventDefault();
         setPendingUrl(href);
         setShowPopup(true);

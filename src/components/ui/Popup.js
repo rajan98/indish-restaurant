@@ -4,7 +4,7 @@ const StoreOpeningPopup = ({
   isOpen,
   onConfirm,
   onCancel,
-  title = "Store is Closed",
+  title = "Online Ordering Unavailable",
   message,
   confirmText = "Yes, Proceed",
   cancelText = "Okay, Got it",
@@ -19,7 +19,7 @@ const StoreOpeningPopup = ({
         <div className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
               <svg
                 className="w-8 h-8 text-white"
                 fill="none"
@@ -40,7 +40,7 @@ const StoreOpeningPopup = ({
                 message
               ) : (
                 <>
-                  We are really sorry. The store is <span className="font-semibold text-primary-600">{`closed`}</span> today.
+                  We are really sorry. Online ordering is unavailable today as our restaurant is <span className="font-semibold text-primary-600">{`closed on ${APP_CONSTANTS.closedDay || "Monday"}s`}</span>. You can still reserve a table or plan an event for any upcoming day!
                 </>
               )}
             </p>

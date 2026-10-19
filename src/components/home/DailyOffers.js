@@ -23,9 +23,9 @@ const DailyOffers = () => {
 
   const handleNavigation = (e, href) => {
     if (!APP_CONSTANTS.opened) {
-      const externalLinks = [APP_URL.book_table];
+      const blockedLinks = [APP_URL.order];
 
-      if (externalLinks.includes(href)) {
+      if (blockedLinks.includes(href)) {
         e.preventDefault();
         setPendingUrl(href);
         setShowPopup(true);
