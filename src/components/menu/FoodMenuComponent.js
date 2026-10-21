@@ -130,8 +130,8 @@ export default function FoodMenuComponent() {
 
       <div className="container mx-auto px-2 sm:px-4 relative z-10 max-w-5xl">
         {/* Royal Dietary Filter Navigation */}
-        <div className="mb-10 text-center">
-          <div className="inline-flex flex-wrap justify-center gap-1.5 sm:gap-2 p-1.5 rounded-full bg-[#24130C]/90 border border-[#D4AF37]/50 shadow-lg backdrop-blur-sm">
+        <div className="mb-8 sm:mb-10 text-center px-1">
+          <div className="grid grid-cols-2 sm:inline-flex sm:flex-row sm:flex-wrap justify-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl sm:rounded-full bg-[#24130C]/90 border border-[#D4AF37]/50 shadow-lg backdrop-blur-sm max-w-sm sm:max-w-none mx-auto">
             <h2 className="sr-only">Food Menu Categories</h2>
             {tabs.map((tab) => {
               const isSelected = activeTab === tab.id;
@@ -143,7 +143,7 @@ export default function FoodMenuComponent() {
                   aria-selected={isSelected}
                   aria-controls={`food-tabpanel-${tab.id}`}
                   aria-describedby={`food-tab-desc-${tab.id}`}
-                  className={`flex items-center gap-2 px-3.5 sm:px-5 py-2 font-serif text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 rounded-full ${
+                  className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 font-serif text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 rounded-xl sm:rounded-full text-center ${
                     isSelected
                       ? "bg-gradient-to-r from-[#B8860B] via-[#D4AF37] to-[#B8860B] text-[#24130C] shadow-[0_2px_10px_rgba(212,175,55,0.4)] border border-[#FFF8E7]"
                       : "text-[#E6C687] hover:text-[#FFF8E7] hover:bg-white/10"
@@ -152,7 +152,7 @@ export default function FoodMenuComponent() {
                   {tab.dotClass && (
                     <span className={`w-2 h-2 rounded-full ${tab.dotClass}`}></span>
                   )}
-                  {tab.icon && <span>{tab.icon}</span>}
+                  {tab.icon && <span className="text-xs">{tab.icon}</span>}
                   <span>{tab.label}</span>
                   <span id={`food-tab-desc-${tab.id}`} className="sr-only">
                     {tab.description}
