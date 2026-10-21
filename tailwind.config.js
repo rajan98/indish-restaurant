@@ -41,6 +41,8 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
+        royal: ['Cinzel', 'Playfair Display', 'serif'],
+        marcellus: ['Marcellus', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
