@@ -466,7 +466,6 @@ export const RoyalJharokhaArch = ({ title, subtitle, count = null }) => {
  * - 4 corner filigree flourishes
  * - Gold double borders
  * - Subtle deckled/textured paper background
- * - Warm ambient drop-shadow
  */
 export const RoyalPaperSheet = ({ children, className = "" }) => {
   return (
@@ -477,7 +476,7 @@ export const RoyalPaperSheet = ({ children, className = "" }) => {
       </div>
 
       <div
-        className="relative bg-[#FAF5E8] rounded-2xl p-4 sm:p-8 md:p-12 shadow-[0_25px_60px_rgba(40,25,12,0.22),0_4px_15px_rgba(40,25,12,0.1)] border-2 border-[#D4AF37]/60"
+        className="relative bg-[#FAF5E8] rounded-2xl p-4 sm:p-8 md:p-12 border-2 border-[#D4AF37]/60"
         style={{
           backgroundImage: `
             radial-gradient(circle at 50% 0%, rgba(255, 253, 245, 0.98) 0%, rgba(250, 245, 232, 0.98) 50%, rgba(243, 233, 212, 0.95) 100%),

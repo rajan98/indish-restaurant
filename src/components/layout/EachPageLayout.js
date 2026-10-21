@@ -4,7 +4,11 @@ import APP_URL from "../../constants/url";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function EachPageLayout({ children, title }) {
+export default function EachPageLayout({
+  children,
+  title,
+  bannerHeight = "h-[320px] md:h-[420px]",
+}) {
   const router = useRouter();
   const path = router.asPath;
 
@@ -12,7 +16,7 @@ export default function EachPageLayout({ children, title }) {
     <div className="min-h-screen bg-black">
       <Header />
       <div
-        className="h-[330px] md:h-[450px] overflow-hidden -mt-1 relative"
+        className={`${bannerHeight} overflow-hidden -mt-1 relative`}
         style={{
           backgroundColor: "#000",
           backgroundImage: `url("/images/Home/AboutSection/Background.webp")`,
@@ -22,14 +26,14 @@ export default function EachPageLayout({ children, title }) {
         }}
       >
         <div
-          className="absolute h-full w-full flex flex-col gap-4 items-center justify-center"
+          className="absolute inset-0 flex flex-col gap-2.5 sm:gap-3 items-center justify-center pt-20 md:pt-28 pb-4 px-4"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.5) 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.65) 30%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.85) 100%)",
           }}
         >
-          <h2 className="text-5xl text-white font-bold">{title}</h2>
-          <div className="bg-black/80 flex items-center justify-center p-3 rounded-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-white font-bold tracking-wide drop-shadow-md text-center">{title}</h2>
+          <div className="bg-black/80 flex items-center justify-center py-2 px-3.5 sm:px-4 rounded-lg border border-white/10 shadow-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

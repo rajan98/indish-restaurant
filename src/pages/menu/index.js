@@ -266,8 +266,8 @@ export default function MenuPage() {
         />
       </Head>
 
-      <EachPageLayout title={"Royal Menu"}>
-        <section className="py-10 sm:py-14 md:py-20 relative overflow-hidden bg-gradient-to-b from-[#160B08] via-[#22120B] to-[#120805]">
+      <EachPageLayout title={"Royal Menu"} bannerHeight="h-[270px] sm:h-[290px] md:h-[320px]">
+        <section className="pt-2 sm:pt-4 md:pt-6 pb-12 sm:pb-16 md:pb-24 relative overflow-hidden bg-gradient-to-b from-[#160B08] via-[#22120B] to-[#120805]">
           {/* Ambient Royal Gold Dust & Jaali Texture */}
           <div
             className="absolute inset-0 pointer-events-none"
@@ -297,7 +297,7 @@ export default function MenuPage() {
                 {/* Ornate Royal Indian Filigree Header matching reference photo */}
                 <RoyalHeaderCrest
                   title="MENU"
-                  subtitle="AUTHENTIC INDIAN RESTRO-BAR • DARBY STREET"
+                  subtitle="AUTHENTIC INDIAN RESTRO-BAR"
                 />
 
                 {/* Royal Tab Navigation with Parchment & Gold Ribbon Design */}
