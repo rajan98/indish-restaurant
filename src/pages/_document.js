@@ -14,7 +14,7 @@ export default function Document() {
 
         {/* Optimized font loading with font-display: swap */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cinzel:wght@500;600;700;800;900&family=Marcellus&display=swap"
           rel="stylesheet"
         />
 

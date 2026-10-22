@@ -1,53 +1,60 @@
 import { useState } from "react";
 import { FOOD_MENU } from "../../constants/menu";
+import {
+  RoyalJharokhaArch,
+  RoyalDietaryBadge,
+} from "./RoyalMenuDecorations";
 
 export default function FoodMenuComponent() {
   const tabs = [
     {
       id: "all",
-      label: "ALL",
-      description: "Complete Indian menu"
+      label: "ALL ITEMS",
+      description: "Complete Indian menu",
+      icon: "❖",
     },
     {
       id: "vegetarian",
       label: "VEGETARIAN",
-      description: "Vegetarian entrees, mains, and street food"
+      description: "Vegetarian entrees, mains, and street food",
     },
     {
       id: "non_vegetarian",
-      label: "NON-VEGETARIAN",
-      description: "Meat, poultry, seafood, and lamb dishes"
+      label: "NON-VEG",
+      description: "Meat, poultry, seafood, and lamb dishes",
     },
     {
       id: "vegan",
       label: "VEGAN",
-      description: "Plant-based Indian dishes"
-    }
+      description: "Plant-based Indian dishes",
+    },
   ];
 
   const [activeTab, setActiveTab] = useState("all");
 
   const getFilteredMenu = () => {
     const filteredMenu = {};
-    
+
     Object.entries(FOOD_MENU).forEach(([sectionKey, section]) => {
       let filteredItems;
-      
+
       if (activeTab === "all") {
         filteredItems = section.items;
       } else if (activeTab === "vegetarian") {
-        filteredItems = section.items.filter(item => item.type === "Veg" || item.type === "Vegan");
+        filteredItems = section.items.filter(
+          (item) => item.type === "Veg" || item.type === "Vegan"
+        );
       } else if (activeTab === "non_vegetarian") {
-        filteredItems = section.items.filter(item => item.type === "Non-Veg");
+        filteredItems = section.items.filter((item) => item.type === "Non-Veg");
       } else if (activeTab === "vegan") {
-        filteredItems = section.items.filter(item => item.type === "Vegan");
+        filteredItems = section.items.filter((item) => item.type === "Vegan");
       }
 
       // Only include sections with matching items
       if (filteredItems && filteredItems.length > 0) {
         filteredMenu[sectionKey] = {
           ...section,
-          items: filteredItems
+          items: filteredItems,
         };
       }
     });
@@ -61,7 +68,6 @@ export default function FoodMenuComponent() {
     if (itemType === "Vegan") tags.push("Vegan");
     if (itemType === "Veg") tags.push("Vegetarian");
     if (itemType === "Non-Veg") tags.push("Non-Vegetarian");
-    // Add Gluten Free tag if item name includes "(GF)"
     if (itemType.name && itemType.name.includes("(GF)")) tags.push("Gluten Free");
     return tags;
   };
@@ -85,10 +91,10 @@ export default function FoodMenuComponent() {
       section.items.forEach((item) => {
         const dietaryTags = getDietaryTags(item.type);
         const suitableDiet = getSuitableDiet(item.type);
-        
+
         menuItems.push({
           "@type": "MenuItem",
-          name: item.name.replace(/\s*\([^)]*\)/g, ""), // Clean name without parenthetical tags
+          name: item.name.replace(/\s*\([^)]*\)/g, ""),
           description: item.description,
           offers: {
             "@type": "Offer",
@@ -110,6 +116,8 @@ export default function FoodMenuComponent() {
     };
   };
 
+  const filteredSections = Object.entries(getFilteredMenu());
+
   return (
     <>
       {/* Structured Data for current tab */}
@@ -120,130 +128,115 @@ export default function FoodMenuComponent() {
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10 max-w-6xl">
-        {/* Dynamic Tab Navigation */}
-        <nav
-          className="flex flex-wrap justify-center mb-8 bg-white rounded-lg shadow-md p-1"
-          role="tablist"
-        >
-          <h2 className="sr-only">Food Menu Categories</h2>
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              role="tab"
-              aria-selected={activeTab === tab.id}
-              aria-controls={`food-tabpanel-${tab.id}`}
-              aria-describedby={`food-tab-desc-${tab.id}`}
-              className={`px-6 py-3 font-semibold text-sm tracking-wider transition-all duration-300 rounded-md mx-1 ${
-                activeTab === tab.id
-                  ? "bg-primary-500 text-white shadow-md"
-                  : "text-gray-600 hover:bg-gray-100"
-              }`}
-            >
-              {tab.label}
-              <span id={`food-tab-desc-${tab.id}`} className="sr-only">
-                {tab.description}
-              </span>
-            </button>
-          ))}
-        </nav>
+      <div className="container mx-auto px-2 sm:px-4 relative z-10 max-w-5xl">
+        {/* Royal Dietary Filter Navigation */}
+        <div className="mb-8 sm:mb-10 text-center px-1">
+          <div className="grid grid-cols-2 sm:inline-flex sm:flex-row sm:flex-wrap justify-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl sm:rounded-full bg-[#24130C]/90 border border-[#D4AF37]/50 shadow-lg backdrop-blur-sm max-w-sm sm:max-w-none mx-auto">
+            <h2 className="sr-only">Food Menu Categories</h2>
+            {tabs.map((tab) => {
+              const isSelected = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  role="tab"
+                  aria-selected={isSelected}
+                  aria-controls={`food-tabpanel-${tab.id}`}
+                  aria-describedby={`food-tab-desc-${tab.id}`}
+                  className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 font-serif text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 rounded-xl sm:rounded-full text-center ${
+                    isSelected
+                      ? "bg-gradient-to-r from-[#B8860B] via-[#D4AF37] to-[#B8860B] text-[#24130C] shadow-[0_2px_10px_rgba(212,175,55,0.4)] border border-[#FFF8E7]"
+                      : "text-[#E6C687] hover:text-[#FFF8E7] hover:bg-white/10"
+                  }`}
+                >
+                  {tab.dotClass && (
+                    <span className={`w-2 h-2 rounded-full ${tab.dotClass}`}></span>
+                  )}
+                  {tab.icon && <span className="text-xs">{tab.icon}</span>}
+                  <span>{tab.label}</span>
+                  <span id={`food-tab-desc-${tab.id}`} className="sr-only">
+                    {tab.description}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-        {/* Dynamic Menu Sections with enhanced SEO markup */}
+        {/* Dynamic Menu Sections styled as Royal Indian Manuscripts */}
         <div
           id={`food-tabpanel-${activeTab}`}
           role="tabpanel"
           aria-labelledby={`food-tab-${activeTab}`}
+          className="space-y-12"
         >
-          {Object.entries(getFilteredMenu()).map(
-            ([sectionKey, section], sectionIndex) => (
-              <article
-                key={sectionKey}
-                className="mb-8"
-                itemScope
-                itemType="https://schema.org/MenuSection"
-              >
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                  {/* Section Header with proper heading hierarchy */}
-                  <header className="bg-black text-white px-6 py-4">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <h3 className="text-xl font-bold" itemProp="name">
-                          {section.title}
-                        </h3>
-                        {section.subtitle && (
-                          <p
-                            className="text-gray-300 text-sm mt-1"
-                            itemProp="description"
-                          >
-                            {section.subtitle}
-                          </p>
-                        )}
-                      </div>
-                      <h4 className="text-xl font-bold">Price</h4>
-                    </div>
-                  </header>
+          {filteredSections.map(([sectionKey, section], sectionIndex) => (
+            <article
+              id={`section-${sectionKey}`}
+              key={sectionKey}
+              className="scroll-mt-24"
+              itemScope
+              itemType="https://schema.org/MenuSection"
+            >
+              <div className="bg-[#FFFDF9] rounded-2xl border-2 border-[#D4AF37]/40 overflow-hidden relative">
+                {/* Royal Jharokha Arch Header */}
+                <RoyalJharokhaArch
+                  title={section.title}
+                  subtitle={section.subtitle}
+                />
 
-                  {/* Menu Items with rich markup */}
-                  <div className="divide-y divide-gray-200">
-                    {section.items.map((item, itemIndex) => {
-                      const dietaryTags = getDietaryTags(item.type);
-                      const suitableDiet = getSuitableDiet(item.type);
+                {/* Royal Menu Items List on Warm Parchment Paper */}
+                <div
+                  className="divide-y divide-[#D4AF37]/20 p-2 sm:p-6"
+                  style={{
+                    backgroundImage: `
+                      radial-gradient(circle at 50% 50%, rgba(255, 253, 248, 1) 0%, rgba(250, 246, 237, 0.95) 100%),
+                      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C5A059' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")
+                    `,
+                  }}
+                >
+                  {section.items.map((item, itemIndex) => {
+                    const dietaryTags = getDietaryTags(item.type);
+                    const suitableDiet = getSuitableDiet(item.type);
 
-                      return (
-                        <div
-                          key={itemIndex}
-                          className="px-6 py-6 flex justify-between items-start hover:bg-gray-50 transition-colors duration-300"
-                          itemScope
-                          itemType="https://schema.org/MenuItem"
-                        >
-                          <div className="flex-1 pr-4">
+                    return (
+                      <div
+                        key={itemIndex}
+                        className="p-4 sm:p-5 hover:bg-[#FAF2DE]/50 rounded-xl transition-all duration-200 group"
+                        itemScope
+                        itemType="https://schema.org/MenuItem"
+                      >
+                        {/* Dish Header: Name + Badges + Leader Line + Price */}
+                        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
+                          <div className="flex items-center flex-wrap gap-2 flex-shrink-0">
                             <h4
-                              className="text-lg font-semibold text-gray-900 mb-2"
+                              className="text-lg sm:text-xl font-serif font-bold text-[#2A1810] group-hover:text-primary-600 transition-colors tracking-wide"
                               itemProp="name"
                             >
                               {item.name}
                             </h4>
-                            <p
-                              className="text-gray-600 leading-relaxed text-sm"
-                              itemProp="description"
-                            >
-                              {item.description}
-                            </p>
-
-                            {/* Hidden structured data for dietary restrictions */}
-                            {suitableDiet && (
-                              <meta
-                                itemProp="suitableForDiet"
-                                content={suitableDiet}
-                              />
-                            )}
-
-                            {/* Hidden dietary tags for SEO only */}
-                            {dietaryTags.length > 0 && (
-                              <div className="sr-only" aria-label="Dietary information">
-                                {dietaryTags.map((tag, tagIndex) => (
-                                  <span
-                                    key={tagIndex}
-                                    itemProp="menuAddOn"
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            )}
+                            <RoyalDietaryBadge type={item.type} />
                           </div>
 
+                          {/* Ornamental Dotted Leader Line (Classic Royal Menu Style) */}
                           <div
-                            className="text-right flex-shrink-0"
+                            className="hidden sm:block flex-1 mx-3 border-b-2 border-dotted border-[#C5A059]/40 self-baseline"
+                            aria-hidden="true"
+                          />
+
+                          {/* Price */}
+                          <div
+                            className="text-left sm:text-right flex-shrink-0 mt-1 sm:mt-0"
                             itemProp="offers"
                             itemScope
                             itemType="https://schema.org/Offer"
                           >
                             <span
-                              className="text-lg font-bold text-gray-900"
+                              className="inline-block text-lg sm:text-xl font-serif font-bold text-[#990022] tracking-wide"
                               itemProp="price"
-                              content={item.price.replace("$", "").replace(" per person", "")}
+                              content={item.price
+                                .replace("$", "")
+                                .replace(" per person", "")}
                             >
                               {item.price}
                             </span>
@@ -254,13 +247,48 @@ export default function FoodMenuComponent() {
                             />
                           </div>
                         </div>
-                      );
-                    })}
-                  </div>
+
+                        {/* Dish Description */}
+                        {item.description && (
+                          <p
+                            className="text-[#5F4B3C] font-sans text-sm sm:text-[15px] leading-relaxed mt-1.5 pr-2"
+                            itemProp="description"
+                          >
+                            {item.description}
+                          </p>
+                        )}
+
+                        {/* Hidden structured data for dietary restrictions */}
+                        {suitableDiet && (
+                          <meta
+                            itemProp="suitableForDiet"
+                            content={suitableDiet}
+                          />
+                        )}
+
+                        {/* Hidden dietary tags for SEO only */}
+                        {dietaryTags.length > 0 && (
+                          <div
+                            className="sr-only"
+                            aria-label="Dietary information"
+                          >
+                            {dietaryTags.map((tag, tagIndex) => (
+                              <span key={tagIndex} itemProp="menuAddOn">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
-              </article>
-            )
-          )}
+
+                {/* Royal Bottom Filigree Border */}
+                <div className="h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent"></div>
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Location and cuisine type context for SEO */}
@@ -280,4 +308,4 @@ export default function FoodMenuComponent() {
       </div>
     </>
   );
-};
+}
