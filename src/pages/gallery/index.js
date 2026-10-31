@@ -1,18 +1,43 @@
+import fs from "fs";
+import path from "path";
 import Head from "next/head";
 import EachPageLayout from "../../components/layout/EachPageLayout";
 import APP_CONSTANTS from "../../constants/app_constants";
 
-export default function index() {
-  const images = [
-    "/images/Home/DailyOffer/2.webp",
-    "/images/Home/DailyOffer/3.webp",
-    "/images/Home/PhotoGallery/1.webp",
-    "/images/Home/PhotoGallery/2.webp",
-    "/images/Home/PhotoGallery/3.webp",
-    "/images/Home/PhotoGallery/4.webp",
-    "/images/Home/PhotoGallery/5.webp",
-    "/images/Home/DailyOffer/1.webp",
-  ];
+export async function getStaticProps() {
+  const galleryDir = path.join(
+    process.cwd(),
+    "public",
+    "images",
+    "Home",
+    "PhotoGallery"
+  );
+
+  let images = [];
+
+  try {
+    const entries = fs.readdirSync(galleryDir, { withFileTypes: true });
+    const imageExtensions = /\.(webp|jpg|jpeg|png|avif|gif)$/i;
+
+    images = entries
+      .filter((entry) => entry.isFile() && imageExtensions.test(entry.name))
+      .map((entry) => entry.name)
+      .sort((a, b) =>
+        a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
+      )
+      .map((fileName) => `/images/Home/PhotoGallery/${fileName}`);
+  } catch (error) {
+    console.error("Error reading PhotoGallery directory:", error);
+  }
+
+  return {
+    props: {
+      images,
+    },
+  };
+}
+
+export default function index({ images = [] }) {
   return (
     <>
       <Head>

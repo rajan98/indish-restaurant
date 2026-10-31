@@ -2,7 +2,20 @@
 
 All notable changes to this project are documented in this file.
 
-## [Unreleased / Latest] - 2026-10-17
+## [2026-10-31]
+
+### Added
+- **Dynamic Photo Gallery Loading (`src/pages/gallery/index.js`):**
+  - Replaced hardcoded image array with dynamic filesystem scanning via `getStaticProps`.
+  - Automatically loads images from `public/images/Home/PhotoGallery/`, filtering out non-image files and directories (such as `Backup/`).
+  - Added natural numerical sorting (`1.webp`, `2.webp`, ..., `10.webp`, ..., `23.webp`).
+  - Implemented as SSG (Static Site Generation) for zero runtime performance penalty and pre-rendered static delivery.
+
+### Changed
+- **Developer Guide Consolidation:**
+  - Consolidated duplicate `Agent.md` and `AGENTS.md` files into single authoritative [`AGENTS.md`](file:///e:/HypervisionV2/indish-restaurant/AGENTS.md) guide and added photo gallery architecture documentation.
+
+## [2026-10-17]
 
 ### Changed
 - **Operating Hours & Weekend Lunch Timing:**

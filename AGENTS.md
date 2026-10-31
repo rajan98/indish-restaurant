@@ -102,7 +102,18 @@ indish-restaurant/
 
 ---
 
-## 6. Development Guidelines
+## 6. Photo Gallery Architecture (`src/pages/gallery/index.js`)
+- **Image Directory:** `public/images/Home/PhotoGallery/`
+- **Dynamic Pre-rendering (SSG):**
+  - Uses Next.js `getStaticProps` to dynamically scan the gallery folder at build time using Node `fs.readdirSync`.
+  - Automatically filters for image extensions (`.webp`, `.jpg`, `.jpeg`, `.png`, `.avif`, `.gif`) and excludes subdirectories (e.g. `Backup/`).
+  - Sorts naturally in numeric order (`1.webp`, `2.webp`, ..., `10.webp`, ..., `23.webp`).
+  - Delivers zero runtime latency (pre-rendered static HTML/JSON) to clients.
+  - Adding or deleting photos in `public/images/Home/PhotoGallery/` will automatically reflect upon the next build (`npm run build`).
+
+---
+
+## 7. Development Guidelines
 - Dev Server: `npm run dev`
 - Build Check: `npm run build`
 - Always verify SSR compatibility by testing `http://localhost:3000/menu` after touching menu constants.
